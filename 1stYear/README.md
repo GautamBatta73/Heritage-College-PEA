@@ -6,6 +6,6 @@
      Web Programming I was a very fun course, though it made me dislike float.
       Flex is Superior.
 #### 3. Hardware & OS
-     Hardware & OS was very fun. I learned alot about the Command Prompt and Security.
+     Hardware & OS was very fun. I learned a lot about the Command Prompt and Security.
 #### 4. Math for Computer Science
      Math has always been my favourite subject, but I absolutly hated this course.
