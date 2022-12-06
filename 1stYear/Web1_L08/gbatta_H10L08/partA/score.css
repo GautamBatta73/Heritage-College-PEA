@@ -1,0 +1,38 @@
+body {
+  background-color: #ffc;
+  color: #006;
+  font-family: Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  padding: 5px;
+  border-bottom: #006 solid 2px;
+}
+
+table {
+  margin: auto;
+  border: #006 double 3px;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 3px;
+  border: #006 Solid 1px;
+}
+
+tr:nth-of-type(even) {
+  background-color: #006;
+  color: #ffc;
+}
+
+th {
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.ctrcol {
+  text-align: center;
+}
