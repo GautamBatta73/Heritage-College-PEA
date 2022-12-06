@@ -1,0 +1,559 @@
+:root {
+	--icingBlue: #2274a5;
+	--icingPink: #ffa3f2;
+	--cakeVanilla: #ddc1a0;
+	--cakeChocolate: #2e1e0f;
+	--cherryRed: #88292f;
+}
+
+.notMobile {
+	display: none;
+}
+
+.businessName {
+	font-weight: bold;
+}
+
+.businessName::after {
+	content: '\2122';
+}
+
+#topMobilePastries {
+	height: fit-content;
+	padding: 0;
+}
+
+input#pastries, label#down {
+	display: none;
+}
+
+ul.submenu {
+	all: unset;
+	z-index: 2;
+	background-color: var(--cakeVanilla, burlywood);
+	position: absolute;
+	display: none;
+	list-style-type: none;
+	border: 0.7vmax solid var(--icingBlue, steelblue);
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+
+label#up {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	height: 1.133em;
+}
+
+label > img {
+    height: 3vw;
+    margin: 0 0 1vw 0.15em;
+}
+
+label#down {
+	position: relative;
+	cursor: pointer;
+	height: 1.133em;
+}
+
+input#pastries:checked~ul.submenu {
+	display: block;
+}
+
+input#pastries:checked~label#up {
+	display: none;
+}
+
+input#pastries:checked~label#down {
+	display: block;
+}
+
+ul.submenu li {
+	padding-bottom: 0.68em;
+	padding-top: 0.68em;
+	padding-left: 0.1em;
+	padding-right: 0.68em;
+	color: var(--cherryRed, crimson);
+}
+
+ul.submenu a::before {
+	content: "\25A0";
+	font-weight: bold;
+}
+
+body {
+	background-color: var(--cakeVanilla, burlywood);
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--cakeChocolate, saddlebrown);
+  margin: 1vw;
+  overflow-wrap: break-word;
+}
+
+main {
+	margin: 0.5em;
+	font-size: 1.25em;
+}
+
+nav.topNav a, header label {
+	text-decoration: none;
+	font-weight: bold;
+	color: inherit;
+	font-size: 8vw;
+}
+
+ul.submenu a {
+	font-size: 7vw;
+}
+
+nav.topNav {
+	border-bottom: 0.7vmax solid var(--icingBlue, steelblue);
+	background: url(../images/banner.png) no-repeat top center/150vw;
+	height: 32vw;
+}
+
+header.topNav {
+	position: relative;
+}
+
+ul.topNav {
+	all: unset;
+	height: inherit;
+	align-items: end;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+div#bibliography {
+	font-size: 5vw;
+	padding: 2vh 0;
+	text-align: center;
+}
+
+div#bibliography p, div#bibliography a {
+	display: block;
+	margin: 0.5em 0;
+}
+
+nav.bottomNav {
+	border-bottom: 0.3vmax solid var(--icingBlue, steelblue);
+	height: 28vw;
+}
+
+nav.bottomNav a {
+	text-decoration: none;
+	font-weight: bold;
+	color: inherit;
+	font-size: 7vw;
+}
+
+div#bottomMobileTop {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+ul#bottomMobilePastries {
+	all: unset;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+ul#bottomMobilePastries li {
+	padding-top: 11vw;
+	width: fit-content;
+}
+
+h1.pageTitle {
+	margin: 0;
+	font-size: 10vw;
+	text-align: center;
+}
+
+h5.pageSubTitle {
+	font-size: 5vw;
+	text-align: center;
+}
+
+.smallParagraph {
+	padding: 0.5em;
+}
+
+div#contactPage {
+	text-align: center;
+}
+
+section#hoursOpen {
+	border-bottom: 0.3vmax solid var(--cakeChocolate, saddlebrown);
+}
+
+div#contactPage a, div#bibliography a {
+	color: var(--cakeChocolate, saddlebrown);
+	font-weight: bold;
+}
+
+div#preMadePastriesPage section {
+	padding: 0 0.5em;
+}
+
+img#home1 {
+	height: 30vw;
+	margin-left: 0.5em;
+	float: right;
+}
+
+div#homePage > div:first-of-type {
+	height: fit-content;
+}
+
+div#homePage > div:last-of-type {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 1em;
+	clear: right;
+}
+
+img#home2, img#home3 {
+	height: 30vw;
+}
+
+div#preMadePastriesPage > div, div#specialsPage > div > div {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 0.3vmax solid var(--cakeChocolate, saddlebrown);
+	margin: 0.8em 0;
+}
+
+div#specialsPage {
+	padding: 0 2em;
+}
+
+div#preMadePastriesPage {
+	padding: 0 1.5em;
+}
+
+div#preMadePastriesPage img, div#specialsPage img {
+	margin-top: 0.5em;
+	width: 45vw;
+	border: 0.4vmax solid var(--cakeChocolate, saddlebrown);
+}
+
+form#customsPage label {
+	font-weight: bold;
+}
+
+form#customsPage > input {
+	width: 55vw;
+}
+
+form#customsPage > fieldset input[type="text"], form#customsPage input[type="email"], form#customsPage input[type="tel"] {
+	width: 70vw;
+}
+
+div#dealsList {
+	margin-top: 5em;
+}
+
+div#specialsPage p {
+	margin: 0.2em 0.5em;
+}
+
+legend {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+span.specialsInfo {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin: 0.5em;
+}
+
+input {
+	font-size: inherit;
+}
+
+textarea {
+	font-size: inherit;
+	font-family: inherit;
+	width: 100%;
+	height: 7em;
+	border: 0.1em solid var(--cakeChocolate, saddlebrown);
+}
+
+textarea#address {
+	height: 4em;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	width: 0.9em;
+	height: 0.9em;
+	margin: 0 0 0 0.1em;
+}
+
+.inputHidden {
+	display: none;
+}
+
+input#pickup:checked~div#pickUpPersonDiv, input#delivery:checked~div#deliverAddress {
+	display: initial;
+}
+
+div#deliverAddress label {
+	vertical-align: top;
+}
+
+input#otherPastryChoice:checked~input#otherText {
+	display: initial;
+}
+
+input#mobileEmailCheck:checked~div#mobileEmailDiv, input#mobilePhoneCheck:checked~div#mobilePhoneDiv {
+	display: block;
+}
+
+input#otherPastryChoice:checked~label#otherLabel:after {
+	content: ": ";
+}
+
+form#customsPage input, form#customsPage fieldset {
+	margin: 0.2em;
+	border: 0.1em solid var(--cakeChocolate, saddlebrown);
+}
+
+form#customsPage fieldset {
+	margin: 1em 0;
+	border: 0.3vmax solid var(--cakeChocolate, saddlebrown);
+}
+
+fieldset#customerMobileContact {
+	margin-bottom: 0;
+}
+
+div#buttonDiv {
+	text-align: center;
+}
+
+button {
+	font-size: inherit;
+	color: inherit;
+	font-weight: bold;
+	background-color: skyblue;
+	padding: 0.5em;
+	cursor: pointer;
+}
+
+button:active {
+	font-size: larger;
+	padding: 0.5em;
+}
+
+nav.topNav .currentPage, nav.bottomNav .currentPage {
+ text-decoration: underline 0.15em;
+}
+
+footer.bottomNav {
+	clear: both;
+	border-top: 0.7vmax solid var(--icingBlue, steelblue);
+	border-bottom: 0.7vmax solid var(--icingBlue, steelblue);
+	background-color: var(--icingPink, violet);
+}
+
+/* Media Query Breakpoint for 768px */
+@media all and (min-width: 768px) {
+	.Mobile {
+		display: none;
+	}
+
+	.notMobile {
+		display: initial;
+	}
+
+	nav.topNav a {
+		font-size: 2.5vmax;
+	}
+
+  body {
+    margin: 0.3vw;
+  }
+
+	nav.topNav {
+		border-bottom: 0.3vmax solid var(--icingBlue, steelblue);
+		height: 17vw;
+		background: url(../images/banner.png) no-repeat top center/100vw;
+	}
+
+	ul.topNav {
+		justify-content: space-around;
+	}
+
+	nav.bottomNav {
+		background: url(../images/logo.png) no-repeat left/10%, url(../images/logo.png) no-repeat right/10%;
+		border-bottom: 0.2vmax solid var(--icingBlue, steelblue);
+		height: inherit;
+	}
+
+	nav.bottomNav div.notMobile {
+		display: flex;
+		justify-content: space-around;
+		height: inherit;
+	}
+
+	nav.bottomNav a {
+		text-decoration: none;
+		font-weight: bold;
+		color: inherit;
+		font-size: inherit;
+	}
+
+	div#homePage {
+		margin: 1em;
+		height: fit-content;
+	}
+
+	div#bottomHome {
+		margin-top: 2%;
+		margin-bottom: auto;
+		font-size: 4.5vmax;
+	}
+
+	div#bottomPastries {
+		margin-top: 0.3%;
+		margin-bottom: auto;
+		font-size: 2.5vmax;
+		text-align: center;
+	}
+
+	div#conAbout {
+		margin-top: 2%;
+		margin-bottom: auto;
+		font-size: 2.5vmax;
+		text-align: center;
+	}
+
+	div#bibliography {
+		font-size: 2vw;
+	}
+
+	h1.pageTitle::before {
+		content: "\1F9C1";
+	}
+
+	h1.pageTitle {
+		font-size: 3vmax;
+	}
+
+	h5.pageSubTitle {
+		margin-top: 1em;
+		font-size: 1.5vw;
+	}
+
+	h3, legend {
+		font-size: 1.5em;
+		margin-bottom: 0.2em;
+		font-weight: bold;
+	}
+
+	div#contactPage {
+		display: grid;
+		grid-template-columns: 2fr 2fr;
+	}
+
+	section#hoursOpen {
+		border-bottom: 0;
+		border-right: 0.3vmax solid var(--cakeChocolate, saddlebrown);
+	}
+
+	div#contactPage, div#specialsPage {
+		padding: 1em;
+		font-size: 1.5vw;
+	}
+
+	form#customsPage {
+		padding: 1em 5em;
+		font-size: 1.5vw;
+	}
+
+	div#preMadePastriesPage {
+		padding: 0 3em;
+		font-size: 1.5vw;
+	}
+
+	img#home1 {
+		height: 15em;
+		margin: 0 0 1em 1em;
+	}
+
+	div#preMadePastriesPage section {
+		padding: 0 0.5em;
+	}
+
+	div#preMadePastriesPage > div {
+		flex-direction: row;
+		margin-right: 2em;
+		text-align: left;
+		margin: 1em;
+	}
+
+	div#specialsPage h3 {
+		padding: 0 0.5em;
+	}
+
+	div#specialsPage > div {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	div#specialsList {
+		padding: 0 6vw;
+	}
+
+	div#specialsPage > div > div {
+		flex: 25vw 0 0;
+	}
+
+	div#deals2 h3 {
+		margin-top: 0.4em;
+	}
+
+	div#preMadePastriesPage img, div#specialsPage img {
+		height: 17vw;
+		width: auto;
+		margin: 0.5em;
+	}
+
+	fieldset#customerContact {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	fieldset#customerContact > label:first-of-type {
+		padding-right: 6vw;
+	}
+
+	form#customsPage > input {
+		width: 20vw;
+	}
+
+	form#customsPage > fieldset input[type="text"], form#customsPage input[type="email"] {
+		width: 30vw;
+	}
+
+	form#customsPage input[type="tel"] {
+		width: 15vw;
+	}
+
+	input#emailCheck:checked~div#emailDiv, input#phoneCheck:checked~div#phoneDiv {
+		display: block;
+		flex-basis: 100%;
+	}
+
+	footer.bottomNav {
+		clear: both;
+		border-top: 0.3vmax solid  var(--icingBlue, steelblue);
+		border-bottom: 0.3vmax solid var(--icingBlue, steelblue);
+	}
+}

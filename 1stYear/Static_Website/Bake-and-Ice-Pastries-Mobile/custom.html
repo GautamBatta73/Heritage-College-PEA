@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+  <link rel="stylesheet" href="styles/site.css" type="text/css">
+  <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <title>Bake and Ice Pastries: Custom Pastry</title>
+</head>
+
+<body>
+  <header class="topNav">
+    <nav class="topNav">
+      <ul class="topNav">
+        <li><a href="index.html">Home</a></li>
+        <li id="topPastries" class="notMobile"><a href="preMadePastries.html">Pastries</a></li>
+        <li class="Mobile" id="topMobilePastries">
+          <input id="pastries" type="checkbox" name="menu">
+          <label id="up" for="pastries">Pastries<img src="images/dropDown-Up.svg" alt="Drop-down menu is up"></label>
+          <label id="down" for="pastries">Pastries<img src="images/dropDown-Down.svg" alt="Drop-down menu is down"></label>
+          <ul class="submenu">
+            <li><a href="preMadePastries.html">Pre-Made</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a class="currentPage" href="custom.html">Custom</a></li>
+          </ul>
+        </li>
+        <li id="topSpecials" class="notMobile"><a href="specials.html">Specials</a></li>
+        <li id="topCustom" class="notMobile"><a class="currentPage" href="custom.html">Custom</a></li>
+        <li id="topContact"><a href="contact.html">Contact</a></li>
+        <li id="topAbout" class="notMobile"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="pageTitle">Custom Pastry(s)</h1>
+    <h5 class="pageSubTitle">
+      Do you want a custom-made pastry/pastries?
+      Well, you can fill out this form and we will send you a message with the price and when it will be ready!
+    </h5>
+    <form id="customsPage">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" required>
+
+      <fieldset id="pastryType">
+        <legend>What Type of Pastry?</legend>
+        <input type="checkbox" name="cake" id="cakePastryChoice">
+        <label for="cakePastryChoice">Cake</label>
+        <br>
+        <input type="checkbox" name="cupcake" id="cupcakePastryChoice">
+        <label for="cupcakePastryChoice">Cupcake</label>
+        <br>
+        <input type="checkbox" name="cookie" id="cookiePastryChoice">
+        <label for="cookiePastryChoice">Cookie</label>
+        <br>
+        <input type="checkbox" name="pie" id="piePastryChoice">
+        <label for="piePastryChoice">Pie</label>
+        <br>
+        <input type="checkbox" name="donut" id="donutPastryChoice">
+        <label for="donutPastryChoice">Donut</label>
+        <br>
+        <input type="checkbox" name="other" id="otherPastryChoice">
+        <label for="otherPastryChoice" id="otherLabel">Other</label>
+        <input class="inputHidden" type="text" name="otherText" id="otherText">
+      </fieldset>
+
+      <fieldset id="pastryQuantity">
+        <legend>How Many Pastries?</legend>
+        <input type="number" name="pastryNumber" id="pastryNumber" value="1" max="100" min="1">
+      </fieldset>
+
+      <fieldset id="pastryDecor">
+        <legend>Tell Us About Your Custom Pastry(s):</legend>
+        <textarea name="pastryDecorText" id="pastryDecorText" required></textarea>
+      </fieldset>
+
+      <fieldset id="pastryTransport">
+        <legend>How Do You Want To Get It?</legend>
+        <input type="radio" name="obtainPastry" id="pickup" checked>
+        <label for="pickup">Pick-Up</label>
+        <br>
+        <input type="radio" name="obtainPastry" id="delivery">
+        <label for="delivery">Delivery</label>
+        <br>
+        <div class="inputHidden" id="deliverAddress">
+          <label for="address">Address: </label>
+          <textarea name="address" id="address" required></textarea>
+        </div>
+        <div class="inputHidden" id="pickUpPersonDiv">
+          <label for="pickupPerson">Who Will Be Picking It Up? </label>
+          <input type="text" name="pickupPerson" id="pickupPerson">
+        </div>
+      </fieldset>
+
+      <fieldset class="notMobile" id="customerContact">
+        <legend>How Should We Contact You?</legend>
+        <input type="checkbox" name="email" id="emailCheck">
+        <label for="emailCheck">Email</label>
+        <input type="checkbox" name="phone" id="phoneCheck">
+        <label for="phoneCheck">Text</label>
+        <br>
+        <div class="inputHidden" id="emailDiv">
+          <label for="emailAddress">Email: </label>
+          <input type="email" name="customerEmail" id="emailAddress" required>
+          <br>
+        </div>
+        <div class="inputHidden" id="phoneDiv">
+          <label for="phoneNum">Phone Number: </label>
+          <input type="tel" name="customerPhone" id="phoneNum" required>
+        </div>
+      </fieldset>
+
+      <fieldset class="Mobile" id="customerMobileContact">
+        <legend>How Should We Contact You?</legend>
+        <input type="checkbox" name="mobileEmail" id="mobileEmailCheck">
+        <label for="mobileEmailCheck">Email</label>
+        <br>
+        <div class="inputHidden" id="mobileEmailDiv">
+          <label for="mobileEmailAddress">Email:&nbsp;</label>
+          <input type="email" name="customerMobileEmail" id="mobileEmailAddress" required>
+        </div>
+        <input type="checkbox" name="mobilePhone" id="mobilePhoneCheck">
+        <label for="mobilePhoneCheck">Text</label>
+        <div class="inputHidden" id="mobilePhoneDiv">
+          <label for="mobilePhoneNum">Phone Number:&nbsp;</label>
+          <input type="tel" name="customerMobilePhone" id="mobilePhoneNum" required>
+        </div>
+      </fieldset>
+      <div id="buttonDiv">
+        <button value="orderSubmit">Place Custom Order</button>
+      </div>
+    </form>
+  </main>
+  <footer class="bottomNav">
+    <nav class="bottomNav">
+      <div class="Mobile" id=bottomMobileNav>
+        <div id="bottomMobileTop">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <ul id="bottomMobilePastries">
+          <li><a href="preMadePastries.html">Pre-Made</a></li>
+          <li><a href="specials.html">Specials</a></li>
+          <li><a class="currentPage" href="custom.html">Custom</a></li>
+        </ul>
+      </div>
+      <div class="notMobile">
+        <div id="bottomHome">
+          <a href="index.html">Home</a>
+        </div>
+        <div id="bottomPastries">
+          <a href="preMadePastries.html">Pastries</a>
+          <br>
+          <a href="specials.html">Specials</a>
+          <br>
+          <a class="currentPage" href="custom.html">Custom</a>
+        </div>
+        <div id="conAbout">
+          <a href="contact.html">Contact</a>
+          <br>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </nav>
+    <div id="bibliography">
+      <p>Logo, Banner, and Tab-Icon Designed by <span class="businessName">Bake and Ice Pastries</span></p>
+    </div>
+  </footer>
+</body>
+
+</html>
