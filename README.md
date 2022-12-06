@@ -1,4 +1,8 @@
-# PEA-Start-Template
-Template for the first PEA assignment to set up the student's repository that will become the PEA. 
+# Program Exit Assessment
+## Gautam Batta
 
-You must modify this file with the information we discussed in class and what is expected in the assignment.
+[batta.gautam@cegep-heritage.qc.ca](mailto:batta.gautam@cegep-heritage.qc.ca)
+
+Heritage College
+
+First-year Computer Science Student
