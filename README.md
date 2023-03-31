@@ -13,9 +13,9 @@ This portfolio will be helpful when we apply for jobs, as we will have something
 our knowledge.
 
 ### My Current Computer Science Courses:
-  1. Programming I
-  2. Web Programming I
-  3. Hardware & OS
-  4. Math for Computer Science
+  1. Programming II
+  2. Web Programming II
+  3. Networks
+  4. Business in The Workplace
 
 ![math](https://user-images.githubusercontent.com/119340575/205943872-9c3b14a7-07db-4aac-a579-4cba24985b35.svg)
