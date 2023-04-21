@@ -1,6 +1,6 @@
 # Sudoku in a JFrame
 ### Requires, Java 17.0.0 minimum
-**scrCode** is the Source Code ffor the program.
+**scrCode** is the Source Code for the program.
 
 **SudokuJAR** is the jar file, and some included games.
 
