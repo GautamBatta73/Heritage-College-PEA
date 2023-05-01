@@ -1,0 +1,68 @@
+* {
+	font-size: 5vmin;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+
+body {
+	background-color: #202020;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+div, label {
+	text-align: center;
+}
+
+label {
+	font-weight: bold;
+	margin: 1em 0.2em;
+}
+
+input, textarea {
+	border: 0.5vmin solid black;
+	transition: border-width 0.3s ease;
+}
+
+input:focus, textarea:focus {
+	border-width: 1vmin;
+}
+
+input#fldShift {
+	width: 2em;
+}
+
+button#reverseBtn img {
+	width: 20vmin;
+}
+
+button#reverseBtn {
+	border: unset;
+	background-color: rgba(0, 0, 0, 0);
+	width: fit-content;
+  margin: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+
+
+
+
+
+
+
+

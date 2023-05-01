@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="styles/site.css" type="text/css">
+	<link rel="icon" href="images/icon.png" type="image/x-icon">
+	<title>Caeser Cypher Encrypter</title>
+</head>
+
+<body>
+	<main>
+		<label for="fldText">
+			Enter Your Text Here:
+			<br>
+			<textarea id="fldText" rows="5" cols="18"></textarea>
+		</label>
+		<label for="fldShift">
+			Enter The Amount of Shift Here:
+			<br>
+			<input type="number" id="fldShift" name="fldShift" value="0" size="1">
+		</label>
+		<label for="result">
+			Cypher:
+			<br>
+			<textarea id="result" rows="5" cols="18" readonly></textarea>
+		</label>
+	</main>
+	<button id="reverseBtn">
+		<img src="images/switch_arrow.svg" alt="Switch Cypher and Text">
+	</button>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
