@@ -3,7 +3,7 @@
 <h3>First Semester</h3>
 
 #### 1. Programming I
-     Programming I was a wonderful course, though it made me despise JFrames.
+     Programming I was a wonderful course, though it made me not fond of JFrames.
 #### 2. Web Programming I
      Web Programming I was a very fun course, though it made me dislike float.
       Flex is Superior.
