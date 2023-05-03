@@ -1,4 +1,4 @@
-## Caeser Cypher
+## Caesar Cypher Solver
 It is a webpage that allows the user to input some text and allow the output to be the original text, shifted to a custumizable degree. <br>
 This allows the user to create encryted ciphers, and allows the user to decrypt, as well.
 
