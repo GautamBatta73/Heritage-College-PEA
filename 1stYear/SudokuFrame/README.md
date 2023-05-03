@@ -1,7 +1,7 @@
 # Sudoku in a JFrame
 ### Requires, Java 17.0.0 minimum to run
 
-Everyone like Sudoku, right? Well this is Sudoku done in a Java JFrame, and it works and is really fun to play.
+Everyone like Sudoku, right? Well this is Sudoku done in a Java JFrame, and it works and is really fun to play. <br>
 
 **scrCode** is the Source Code for the program.
 
