@@ -1,0 +1,266 @@
+:root {
+	--coolBlue: #2274a5; /* steelblue */
+	--coolPink: #ffa3f2; /* violet */
+	--vanilla: #ddc1a0; /* burlywood */
+	--chocolate: #2e1e0f; /* saddlebrown */
+	--cherryRed: #88292f; /* crimson */;
+}
+
+html {
+scroll-behavior: smooth;	
+}
+
+* {
+	font-size: unset;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--chocolate, saddlebrown);
+}
+
+body {
+	background-color: var(--vanilla, burlywood);
+	margin: 1% 2%;
+	overflow-wrap: anywhere;
+}
+
+h2 {
+	text-align: center;
+	font-size: 6vmin;
+}
+
+header > div#userInfo {
+	text-align: left;
+	margin-bottom: 1.5em;
+	font-size: 4.5vmin;
+}
+
+div#userInfo > p,
+button#quit,
+p#bal {
+	margin: 0;
+}
+
+p.lastLogin {
+	font-size: 0.9em;
+}
+
+div#balQuit {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	font-size: 3.5vmin;
+}
+
+button#quit {
+	padding: 0 0.5em;
+	background-color: var(--cherryRed, crimson);
+	color: var(--coolPink, violet);
+	transform: scale(1);
+	transition: transform 0s ease;
+}
+
+p#bal {
+	margin: inherit;
+}
+
+p#bal:before {
+	content: "Balance: ";
+	font-weight: bold;
+}
+
+div#userInfo > p:before {
+	margin-left: 1.5em;
+	font-weight: bold;
+}
+
+p.name:before {
+	content: "Name: ";
+}
+
+p.userName:before {
+	content: "Username: ";
+}
+
+p.phoneNum:before {
+	content: "Phone Number: ";
+}
+
+p.city:before {
+	content: "City: ";
+}
+
+p.email:before {
+	content: "Email Address: ";
+}
+
+div#userInfo > p.lastLogin:before {
+	margin-left: 1.667em;
+	content: "Last Login: ";
+}
+
+p.logOut:before {
+	content: "Not You? ";
+}
+
+label,
+input#submitBtn,
+input#rollBtn,
+button {
+	font-weight: bold;
+}
+
+input,
+label {
+	font-size: 4vmin;
+}
+
+input {
+	width: 40%;
+	margin: 0.4em 0;
+	border-color: var(--chocolate, saddlebrown);
+}
+
+input:focus,
+button:focus {
+	border: 0.4vw solid var(--chocolate, saddlebrown);
+}
+
+input#fldBalance,
+input#fldMain,
+input#fldBet {
+	width: 8%;
+}
+
+div#submitBtnDiv {
+	text-align: center;
+	margin: 1em 0;
+}
+
+div#submitBtnDiv p {
+	font-size: 3.5vmin;
+	margin-top: 1%;
+}
+
+input#submitBtn,
+input#rollBtn {
+	font-size: 5vmin;
+	width: fit-content;
+	padding: 0.3em;
+	color: var(--coolPink, violet);
+	background-color: var(--coolBlue, steelblue);
+	transform: scale(1);
+	transition: transform 0.2s ease;
+	margin: 0;
+}
+
+button.quitWindow,
+button.logOutScreen,
+p.logOut > button {
+	width: fit-content;
+	background-color: var(--coolBlue, steelblue);
+	transform: scale(1);
+	font-size: 4vmin;
+	transition: transform 0s ease;
+	margin: 1%;
+}
+
+input#submitBtn:active,
+button#quit:active,
+input#rollBtn:active,
+button.quitWindow:active button.logOutScreen:active,
+p.logOut > button:active {
+	transform: scale(1.3);
+}
+
+div#errorDiv {
+	display: none;
+	color: var(--cherryRed, crimson);
+	font-size: 4vmin;
+	font-weight: bold;
+	font-style: italic;
+	margin-left: 8vmin;
+}
+
+label.error,
+div#errorDiv > p {
+	all: inherit;
+	margin-left: 1em;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+input.error {
+	color: var(--cherryRed, crimson);
+	font-weight: bold;
+	font-style: italic;
+	border-color: var(--cherryRed, crimson);
+}
+
+button,
+label.error,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+div#result {
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 5vmin;
+	align-items: center;
+}
+
+div#result > div {
+	width: fit-content;
+}
+
+div#result img {
+	width: 25%;
+	height: 25%;
+}
+
+dialog.quitWindow,
+dialog.logOutScreen {
+	background-color: var(--coolBlue, steelblue);
+	border: 0.5vmin solid var(--chocolate, saddlebrown);
+	padding: 0 1%;
+	text-align: center;
+	transform: scale(1.5);
+}
+
+p.quitWindow,
+span.quitWindow,
+p.logOutScreen,
+span.logOutScreen {
+	font-size: 4vmin;
+}
+
+p.logOut > button {
+	margin: 0;
+}
+
+p.quitWindow:after {
+	content: "You may now close this Window.";
+	display: block;
+}
+
+div#result p {
+	margin: auto 0;
+	font-size: inherit;
+	padding: 0 1%;
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(0.5em);
+}
+
+footer {
+	margin: 4% 4% 0% 4%;
+	text-align: center;
+}
+
+small {
+	font-size: 2.5vmin;
+}

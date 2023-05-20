@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="styles/site.css" type="text/css" rel="stylesheet">
+	<link rel="icon" type="images/x-icon" href="images/icon.ico">
+	<title>Web II:Assignment III | Hazard Intro</title>
+</head>
+
+<body>
+	<header>
+		<h2>Intro Form for Hazard</h2>
+	</header>
+
+	<form id="introForm" action="game.html" method="get" name="introForm" novalidate>
+		<label id="lblFName" for="fldFName">First Name:</label>
+		<input type="text" id="fldFName" name="fldFName">
+		<br>
+		<label id="lblLName" for="fldLName">Last Name:</label>
+		<input type="text" id="fldLName" name="fldLName">
+		<br>
+		<label id="lblUName" for="fldUName">Username:</label>
+		<input type="text" id="fldUName" name="fldUName">
+		<br>
+		<label id="lblPNum" for="fldPNum">Phone Number:</label>
+		<input type="text" id="fldPNum" name="fldPNum">
+		<br>
+		<label id="lblCity" for="fldCity">City:</label>
+		<input type="text" id="fldCity" name="fldCity">
+		<br>
+		<label id="lblEmail" for="fldEmail">Email Address:</label>
+		<input type="text" id="fldEmail" name="fldEmail">
+		<br>
+		<label id="lblBalance" for="fldBalance">Starting Balance:</label>
+		<input type="text" id="fldBalance" name="fldBalance">
+		<div id="submitBtnDiv">
+			<input type="submit" id="submitBtn" value="Submit">
+		</div>
+	</form>
+
+	<div id="errorDiv">Errors:</div>
+
+	<footer>
+		<small>
+			All Graphics Used on This Website Were Created By Me.
+		</small>
+	</footer>
+	<script src=https://code.jquery.com/jquery-3.4.0.min.js
+		integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous">
+	</script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js">
+	</script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js">
+	</script>
+	<script src="js/userForm_validation.js"></script>
+</body>
+
+</html>

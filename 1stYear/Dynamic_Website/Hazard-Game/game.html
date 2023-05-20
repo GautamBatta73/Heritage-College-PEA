@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="images/x-icon" href="images/icon.ico">
+	<link href="styles/site.css" type="text/css" rel="stylesheet">
+	<title>Web II: Assignment III | Hazard Game</title>
+</head>
+
+<body>
+	<header>
+		<div id="balQuit">
+			<button id="quit">Quit</button>
+			<p id="bal"></p>
+		</div>
+		<h2>Hazard</h2>
+		<div id="userInfo"></div>
+	</header>
+	<main>
+		<form id="gameForm" name="gameForm">
+			<label id="lblBet" for="fldBet">How Much Do You Want To Bet?</label>
+			<input type="text" id="fldBet" name="fldBet">
+			<br>
+			<label id="lblMain" for="fldMain">The Main To Bet On:</label>
+			<input type="text" id="fldMain" name="fldMain">
+
+			<div id="submitBtnDiv">
+				<input type="submit" id="rollBtn" value="Roll Dice">
+			</div>
+		</form>
+		<div id="errorDiv">Errors:</div>
+		<div id="result">
+			<img id="rolledDiceImg1">
+			<img id="rolledDiceImg2">
+			<p></p>
+		</div>
+		<dialog class="logOutScreen">
+			<h2 class="logOutScreen">Log Out</h2>
+			<span class="logOutScreen">See You Soon!</span>
+			<br>
+			<button class="logOutScreen" id="closeBtn">No, I Want To Stay</button>
+			<button class="logOutScreen" id="confirmBtn">Log Out</button>
+		</dialog>
+
+		<dialog class="quitWindow">
+			<h2 class="quitWindow">Quit</h2>
+			<p class="quitWindow">Thanks for Playing!</p>
+			<span class="quitWindow"></span>
+			<br>
+			<button class="quitWindow">Okay</button>
+		</dialog>
+	</main>
+	<footer>
+		<small>
+			All Graphics Used on This Website Were Created By Me.
+		</small>
+	</footer>
+	<script src="js/game.js"></script>
+	<script src="js/user_game.js"></script>
+</body>
+
+</html>
