@@ -10,16 +10,16 @@
 #### 3. Hardware & OS
      Hardware & OS was very fun. I learned a lot about the Command Prompt and Security.
 #### 4. Math for Computer Science
-     Math has always been my favourite subject, but I absolutly hated this course.
+     The course focused on base 2, 8, 10, and 16 numbers. We were taught to convert between them.
 <br>
 <h3>Second Semester</h3>
      
 #### 1. Programming II
      Programming II was an amazing course, and it showed me the true brilliance of JFrames.
 #### 2. Web Programming II
-     Web Programming I was extremely fun, and absolutly love JavaScript (Not as much as Java, though).
-     The course inspired me create my own JavaScript Library: https://www.github.com/GautamBatta73/SidGautam.
+     Web Programming I was extremely fun, and absolutely love JavaScript (Not as much as Java, though).
+     The course inspired me to create my own JavaScript Library: https://www.github.com/GautamBatta73/SidGautam.
 #### 3. Networks
-     Networks had some fun parts, but, as a whole, I did not enjoy it that much.
+     As a whole, the only thing I liked, was that we were taught how VPNs work and how Network infrastructures are built.
 #### 4. Business in The Workplace
-     As a whole, Business in The Workplace was quite boring to me, as I had already taken 3 Business courses that taught me the same things.
+     As a whole, Business was quite boring. However, I enjoyed learning about interpersonal skills.
