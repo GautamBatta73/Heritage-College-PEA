@@ -3,23 +3,22 @@
 <h3>First Semester</h3>
 
 #### 1. Programming I
-     Programming I was a wonderful course, though it made me not fond of JFrames.
+     Programming I was a wonderful course that taught me the basics of programming in Java.
 #### 2. Web Programming I
-     Web Programming I was a very fun course, though it made me dislike float.
-      Flex is Superior.
+     Web Programming I was a very fun course that taught me the basics of HTML and CSS, and good web design.
 #### 3. Hardware & OS
-     Hardware & OS was very fun. I learned a lot about the Command Prompt and Security.
+     Hardware & OS was also very fun. I learned a lot about the hardware of computers, how to use the Command Prompt, and a bit about Security.
 #### 4. Math for Computer Science
-     The course focused on base 2, 8, 10, and 16 numbers. We were taught to convert between them.
+     The course taught me about base 2, 8, 10, and 16 numbers, and how to convert between them and perform operations. It also taught me about data representation and vectors.
 <br>
 <h3>Second Semester</h3>
      
 #### 1. Programming II
-     Programming II was an amazing course, and it showed me the true brilliance of JFrames.
+     Programming II was an amazing course that expanded my knowledge of JFrames and Java, in general.
 #### 2. Web Programming II
-     Web Programming I was extremely fun, and absolutely love JavaScript (Not as much as Java, though).
-     The course inspired me to create my own JavaScript Library: https://www.github.com/GautamBatta73/SidGautam.
+     Web Programming I was extremely fun. I was taught the basics of JavaScript and its libraries.
+     The course inspired me to create my own JavaScript Library: https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript(ProtoType).
 #### 3. Networks
-     As a whole, the only thing I liked, was that we were taught how VPNs work and how Network infrastructures are built.
+     This course expanded my knowledge of using the command prompt. I also learned more about Security, how VPNs work, Encryption/Ciphers, and how Network infrastructures are built.
 #### 4. Business in The Workplace
-     As a whole, Business was quite boring. However, I enjoyed learning about interpersonal skills.
+     The course taught me a lot about what to do and not to do during interviews. It also taught me about writing effective resumes, managing my time, and effectively using Microsoft Excel and Word.
