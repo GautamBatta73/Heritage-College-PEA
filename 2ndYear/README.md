@@ -1,4 +1,4 @@
-## The second year was a great continuation of the more frustrating, yet still fun, pats of the Computer Science world.
+## The second year was a great continuation of the more frustrating, yet still fun, parts of the Computer Science world.
 <br>
 <h3>First Semester</h3>
 
