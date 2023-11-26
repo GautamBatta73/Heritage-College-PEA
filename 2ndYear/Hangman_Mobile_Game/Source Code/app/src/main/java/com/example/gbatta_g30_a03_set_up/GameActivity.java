@@ -301,10 +301,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 handleException(e);
             }
         }
-        if (isConnected()) {
-            int rand = ((int) (Math.random() * 99)) + 1;
-            if (rand <= 1) ad();
-        }
     }
 
     @Override
@@ -357,70 +353,5 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         } catch (Exception e) {
             handleException(e);
         }
-    }
-
-    public void ad() {
-        try {
-            int rand = ((int) (Math.random() * 6));
-            String[] singer = {"Rick Astley", "Smash Mouth", "Panjabi MC", "Indian Lil Nas X", "Daler Mehndi", "TSeries"};
-            String[] link = {"dQw4w9WgXcQ", "dkXG6con_a4", "x9WO2ieJMYk", "B0dtHZqeXsY", "92ydUdqWE1g", "J1rOfVst-EQ"};
-
-            int resourceId = R.raw.class.getField("ad" + rand).getInt(null);
-            VideoView vid = new VideoView(this);
-            vid.setOnPreparedListener(mp -> mp.setLooping(true));
-            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + resourceId);
-            vid.setVideoURI(uri);
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogStyle));
-            builder.setTitle("Advertisement");
-            builder.setMessage("This Game is Proudly Sponsored By " + singer[rand] + ".\n\n You May Skip It After 10 Seconds.");
-            builder.setIcon(android.R.drawable.ic_menu_close_clear_cancel);
-            builder.setView(vid);
-            builder.setPositiveButton("SKIP", (dialog2, which) -> dialog2.dismiss());
-
-            AlertDialog dialog = builder.create();
-            dialog.setOnShowListener(dialogInterface -> {
-                Button b1 = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                ImageView imageView = dialog.findViewById(android.R.id.icon);
-                if (imageView != null) {
-                    imageView.setColorFilter(Color.RED);
-
-                    imageView.setOnClickListener(v -> {
-                        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + link[rand]));
-                        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=" + link[rand]));
-
-                        try {
-                            startActivity(appIntent);
-                        } catch (Exception ex) {
-                            startActivity(webIntent);
-                        }
-                    });
-                }
-                if (b1 != null) {
-                    b1.setTextColor(0xFFFF0000);
-                    b1.setEnabled(false);
-                    b1.postDelayed(() -> {
-                        b1.setEnabled(true);
-                        b1.setTextColor(0xFF000000);
-                    }, 12000);
-                }
-            });
-
-            dialog.show();
-            dialog.setCanceledOnTouchOutside(false);
-            dialog.setCancelable(false);
-            vid.postDelayed(vid::start, 2000);
-        } catch (Exception ignored) {
-        }
-    }
-
-    public boolean isConnected() {
-        try {
-            ConnectivityManager cm = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
-            return cm.getNetworkCapabilities(cm.getActiveNetwork()).hasCapability(NET_CAPABILITY_INTERNET);
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
+    }    
 }
