@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="HangmanRules">
+    1. The game thinks of a word, and the player tries to guess it by suggesting letters.\n\n
+    2. The word to guess is represented by a row of dashes, one for each letter.\n\n
+    3. The player has 6 chances to guess the word by suggesting a letter that they think might be in the word.\n\n
+    4. If the letter is present in the word, it is revealed in all its correct positions. If the letter is not present, a body part of a hanged figure is decomposed.\n\n
+    5. The game moves to the next word when the player successfully guesses the word or when the full hangman figure is decomposed (i.e., after a certain number of incorrect guesses).
+    </string>
+</resources>
