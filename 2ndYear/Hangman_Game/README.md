@@ -7,8 +7,8 @@ The program reads in the guessable words from a file and then displays the lette
 
 **scrCode** is the Source Code for the program.
 
-**SudokuJAR** is the jar file, with an included list of words.
+**HangmanGameJAR** is the jar file, with an included list of words.
 
-**SudokuEXE** is the exe file, with an included list of words.
+**HangmanGameEXE** is the exe file, with an included list of words.
 
 <img src="https://github.com/HeritageCollegeClassroom/2022-program-exit-assessment-GautamBatta73/assets/119340575/46323ae4-99bc-4ebf-9959-24d772bad23b" alt="Screenshot of The Jar/EXE File" style="width:40em;"></img>
