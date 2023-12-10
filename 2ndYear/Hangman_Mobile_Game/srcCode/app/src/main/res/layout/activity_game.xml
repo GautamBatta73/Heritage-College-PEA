@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".GameActivity">
+
+    <Spinner
+        android:id="@+id/dropdownMenu"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:background="#54a5d5"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/hangmanImg"
+        android:layout_width="395dp"
+        android:layout_height="472dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badGuesses"
+        app:srcCompat="@drawable/hang0" />
+
+    <EditText
+        android:id="@+id/fldGuess"
+        android:layout_width="65dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/bordered_background"
+        android:ems="10"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:inputType="text"
+        android:maxLength="1"
+        android:textAlignment="gravity"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@+id/lblGuess"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="60dp"
+        android:text="Guess:"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/badGuesses"
+        android:layout_width="400dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:text="Incorrect Guesses: W, W. W. W, W, W"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGuess" />
+
+    <TextView
+        android:id="@+id/answerArea"
+        android:layout_width="355dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hangmanImg" />
+
+    <ImageButton
+        android:id="@+id/btnGuess"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/enter_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

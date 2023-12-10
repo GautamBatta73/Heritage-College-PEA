@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="options">
+        <item>Menu</item>
+        <item>New Game</item>
+        <item>Save</item>
+        <item>Scoreboard</item>
+        <item>About</item>
+        <item>Hint</item>
+    </array>
+</resources>
