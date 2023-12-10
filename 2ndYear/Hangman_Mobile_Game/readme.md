@@ -1,5 +1,5 @@
 # Hangman on Android
-### Requires, Android SDK 33 minimum to run
+### Requires, Android API 31 minimum to run the source code; And Android 12 minimum to run the app (APK).
 
 Everyone likes playing Hangman, right? Well, this is Hangman done in a Java JFrame, and it works and is really fun to play. <br><br>
 
