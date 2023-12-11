@@ -3,13 +3,15 @@
 <h3>First Semester</h3>
 
 #### 1. Programming III
-     placehold
+      Programming III was a good course that rounded out my knowledge of JFrames and Java, in general. It also taught me more complex
+       programming concepts, like serialization. I also learned a lot about Android programming.
 #### 2. Web Programming III
-     placehold
+     Web Programming III was extremely fun. I was taught the basics of NodeJS and React.
 #### 3. Database Management I
-     placehold
+      This course taught me the basics of using Oracle SQL as a Database Manager. I also learned Database modelling and normalization.
 #### 4. Systems Analysis
-     placehold
+      This course taught me about the software development life cycle, with an emphasis on Agile and continuous delivery methodologies.
+       I also learned about tools and techniques for identifying and analyzing user requirements. We also touched on good UI design.
 <br>
 <h3>Second Semester</h3>
      
