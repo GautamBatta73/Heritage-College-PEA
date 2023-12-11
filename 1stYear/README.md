@@ -19,7 +19,7 @@
      Programming II was an amazing course that expanded my knowledge of JFrames and Java, in general.
 #### 2. Web Programming II
      Web Programming I was extremely fun. I was taught the basics of JavaScript and its libraries.
-     The course inspired me to create my own JavaScript Library: https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript(ProtoType).
+     The course inspired me to create my own JavaScript Library: https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript.
 #### 3. Networks
      This course expanded my knowledge of using the command prompt. I also learned more about Security, how VPNs work,
       Encryption/Ciphers, and how Network infrastructures are built.
