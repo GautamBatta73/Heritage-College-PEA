@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14719601-6AB5-82AD-0919-41BAC446C67E" name="HVK_Reserved_Food">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>CFF614C1-8B2A-B681-A156-3AE04D7036C2</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>RES_FOOD</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RES_Reservation_ID" id="64F999CF-4C08-009C-9E82-736B8658B987">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>F29F8CC9-41B8-0626-F32B-25FADA0091F3</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RESFOOD_RES__ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="86C8CD9D-15E1-3D3C-A5C9-098E93D98204" referredColumn="8D13A58D-E766-C3F6-08A8-0B3E356B34D4"/>
+</associations>
+</Column>
+<Column name="FOOD_Food_ID" id="858C9CD3-613B-08A9-5CB1-0071D98E92C5">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>0B42BC37-C2FD-7164-E374-A05C8812E0DF</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_FOOD_FOOD_Food_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="1DDD9798-89B8-2ABB-5B7A-5D6B13EC64C0" referredColumn="30DD72C8-E2B1-9636-9ABC-A8317AB1DB75"/>
+</associations>
+</Column>
+<Column name="Reserved_Food_Frequency" id="63CB4B1B-B8DA-BE62-6EFC-C412E73825FF">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>C3A991B8-DD76-2AB8-68A6-4E82D228F1BF</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<defaultValue>24:30</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reserved_Food_Quantity" id="CD80B820-8BD0-D0AA-F1A0-4EE4FD6D7821">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>71915A2D-C564-A69D-A3C9-7B77C391C1C8</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F3D41154-4949-EA13-DEE0-872ADD2AECFC" name="HVK_Reserved_Food_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>C73A884B-5660-0B75-4D6E-C2D3CE39B346</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64F999CF-4C08-009C-9E82-736B8658B987"/>
+<colUsage columnID="858C9CD3-613B-08A9-5CB1-0071D98E92C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="61BF6F5D-CB80-2FD7-360B-11794DFBBA80" name="RES_FOOD_RES_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>56ED3D09-9DB0-D240-64F6-4368BD3A300F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64F999CF-4C08-009C-9E82-736B8658B987"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDEB6893-9E1C-9E30-3A06-89DD8A901143" name="RES_FOOD_FOOD_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>9889F78F-56C3-1556-F63C-56A84A075A84</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="858C9CD3-613B-08A9-5CB1-0071D98E92C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB6538FD-2A1F-F778-D071-CAB505E463DD" name="Reserved_Coop">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:10:25 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>RES_COOP</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reservation_ID" id="898DC722-7275-40D7-412F-323EA45401EC">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:30 UTC</createdTime>
+<generatorID>39D953AA-0E90-6F0F-9E74-715EB59A48A8</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>FB49FF91-48C5-5AF9-7E37-CF4360AA4753</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Coop_ID" id="6CF66698-1118-84CC-D5D8-E57C2F17DE0E">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:11:58 UTC</createdTime>
+<generatorID>87B6ACA1-055A-A408-BA84-586830954800</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>96573F24-0FB4-748D-D64B-C7A1C84803F0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="79FAD072-6EE3-BEB3-E096-C66458F72046" name="Reserved_Coop PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:03 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>898DC722-7275-40D7-412F-323EA45401EC</attributeRef>
+<attributeRef>6CF66698-1118-84CC-D5D8-E57C2F17DE0E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

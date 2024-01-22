@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="jojical_model" id="C1C3AAE4-C02A-B758-B708-EC26EA69BA28" version="3.5">
+<createdBy>2232517</createdBy>
+<createdTime>2023-09-22 13:07:09 UTC</createdTime>
+<ownerDesignName>coceptual_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C1C3AAE4-C02A-B758-B708-EC26EA69BA28</designId>
+</OSDM_Design>

@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8606357E-EEF0-517A-BD3B-52A5D8EE747A" name="Reservation">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:07:24 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>RES</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reservation_ID" id="FB49FF91-48C5-5AF9-7E37-CF4360AA4753">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:11:23 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B7AD63FB-113C-967D-6DBD-CFCD20DE6EE4" name="Reservation PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:03 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FB49FF91-48C5-5AF9-7E37-CF4360AA4753</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

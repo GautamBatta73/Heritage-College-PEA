@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C763F9F7-F0A3-FC9F-C540-2F42D1D6C1A3" name="HVK_Vaccination">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>6C2178A1-050B-440A-20A6-660B7857B900</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>VAC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Vaccination_Name" id="56F39B29-1171-8C62-7A6F-FDDC11199BE2">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>B8363B80-4A31-0D19-8D0D-F5EFAA8F4D5A</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_VAC_Vaccination_Name</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="215D0BFD-32D1-3F51-23AC-A2C9BAB59164" name="HVK_Vaccination_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>B9EA52EE-B600-D54A-824B-CC40CF03216D</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56F39B29-1171-8C62-7A6F-FDDC11199BE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

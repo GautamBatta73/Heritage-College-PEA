@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A98CB25E-67F8-2525-CFBD-E7D895278BC7" name="Medication">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:07:24 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>MED</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Medication_ID" id="36C5A7A8-7A45-139F-1C14-2287851640E1">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:28:49 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Medication_Name" id="CD9ADCD2-D3CE-492F-E053-D7AAC8973C19">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:24:49 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>35,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2C9459E2-28B9-287D-0956-1FE3996F532D" name="Medication PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:25:38 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>36C5A7A8-7A45-139F-1C14-2287851640E1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

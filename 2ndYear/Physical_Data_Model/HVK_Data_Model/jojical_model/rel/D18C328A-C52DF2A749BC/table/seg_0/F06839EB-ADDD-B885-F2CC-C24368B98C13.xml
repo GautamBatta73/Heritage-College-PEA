@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F06839EB-ADDD-B885-F2CC-C24368B98C13" name="HVK_Reserved_Medication">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>152479BA-A399-ACB4-C308-4A59416F5368</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>RES_MED</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MED_Medication_ID" id="778447A0-5D48-8F7A-E2A4-4A08806923A5">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>F510059E-D231-2CD2-B54B-A9E9E8DD5C00</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_MED_MED_Medication_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="BEDFFE1A-7D8A-3C35-64B4-520E0F6FE98E" referredColumn="302EAEBD-2ABA-3F6E-C539-B39E348559D7"/>
+</associations>
+</Column>
+<Column name="Reserved_Medication_Dosage" id="F3555BB2-78BC-A10C-1966-94B62EC3A29D">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>E658BD91-A291-C2A4-F3EB-1F7769ADA15E</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reserved_Medication_Interval" id="D1D84E95-0888-3DC8-22EF-3EE9ECAE53BF">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>685FF853-6EEF-445D-3615-7B0978B0A67F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<defaultValue>24:30</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PET_PET_Pet_ID" id="91F13D52-A054-315F-31E3-3A6FBED758EE">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>4FA525BA-883D-3786-0E7B-43A8CEC88C1A</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_MED_PET_PET_Pet_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="94057BAE-0F45-447E-89A4-3D2A4CC0F534" referredColumn="8B7BCADE-2E6D-A855-BC44-CFCFF63F31BA"/>
+</associations>
+</Column>
+<Column name="Reserved_Medication_End_Date" id="345F14D1-2BE4-6C62-B341-FCEEFD28B9DF">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>1B081897-BD58-F529-C41C-33FFCBF84A57</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F52EFBF0-9084-B844-756A-0D48CBFA5E97</domain>
+<defaultValue>05/SEPT/2001</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C73E39B-7279-91A1-9CE0-FEE2F91B1A42" name="HVK_Reserved_Medication_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>EA9CA01A-DE9D-007A-DA45-B32A8748AFFF</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91F13D52-A054-315F-31E3-3A6FBED758EE"/>
+<colUsage columnID="778447A0-5D48-8F7A-E2A4-4A08806923A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C37D3893-5D2D-FB09-3709-8FA44582C66E" name="RES_MED_MED_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>4134E3C6-E8B3-B7A5-C7CF-77714D97A0EE</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="778447A0-5D48-8F7A-E2A4-4A08806923A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A08C47E7-0B74-738C-AC32-E42379FE5D4E" name="RES_MED_PET_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>177051E5-069E-1DF0-A6A6-3BE85FF39639</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91F13D52-A054-315F-31E3-3A6FBED758EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

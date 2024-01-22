@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="92584C14-50EE-79D5-8C4E-CEAC455FAB30" name="Pet_Vaccination">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:06:14 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>PET_VAC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Pet_ID" id="945B1530-451A-6B9D-D92C-16F78B7A4AC6">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:07:09 UTC</createdTime>
+<generatorID>33B3FD45-0A7A-7181-A540-C50AFD23321D</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>2490DE57-4302-BAE6-12BC-C41FA735716F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Vaccination_Name" id="DC132BEC-83B8-99A4-316C-197A35BBA5BB">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:10:34 UTC</createdTime>
+<generatorID>634F0B3F-EF5B-4551-EA60-6B25CA468572</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>B8363B80-4A31-0D19-8D0D-F5EFAA8F4D5A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pet_Vaccination_Expiry_Date" id="21E15B6C-7307-D4C1-26AE-54D014BCD3A0">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:08:35 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F52EFBF0-9084-B844-756A-0D48CBFA5E97</domain>
+<defaultValue>&apos;05-SEPT-2001&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F3BFE0FA-E239-C609-04F3-5A9223F5C87B" name="Pet_Vaccination PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:07:11 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>945B1530-451A-6B9D-D92C-16F78B7A4AC6</attributeRef>
+<attributeRef>DC132BEC-83B8-99A4-316C-197A35BBA5BB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2549B539-251C-D398-C549-7C1312DBAA56" name="Service">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:07:24 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>SERV</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Service_ID" id="10E2B6AB-FC6F-9F20-BC5F-141E376FBAF4">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:48:25 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Service_Type" id="BBBFBCB3-BA13-DAE6-4527-34C98DF3A16F">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:16:41 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Service_Price" id="FCCFA217-2374-4438-5733-AB06FF254BEB">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:17:49 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rate_Rate" id="0D5A82A6-687F-8376-D8C5-32083F641625">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:22:24 UTC</createdTime>
+<generatorID>5264BFB7-3062-F9E8-30B0-97F5448EDEEF</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>44479DCD-929C-BEB7-A963-30C4F4DB272D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BB1E0C7B-A6A8-C1EC-2E21-F8BBC22C453F" name="Service PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:49:54 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>10E2B6AB-FC6F-9F20-BC5F-141E376FBAF4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

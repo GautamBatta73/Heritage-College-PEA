@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9DBB0DE-1AD2-7AA4-CB4D-FBBC94346FA8" name="HVK_Pet">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>50DB456F-3071-527B-75AD-439D3EFCA312</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>PET</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CUST_Customer_ID" id="51C1D4EA-C7CB-78F6-3CCF-488A3BC393A4">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>D46A8B45-62C1-88B4-8247-0D439B1F2F84</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_CUST_Customer_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="59CC28C7-3C33-9824-342B-857C9A53D239" referredColumn="4670C11D-FDA8-A5A4-15B6-4C83FCFF990A"/>
+</associations>
+</Column>
+<Column name="PET_Pet_ID" id="8B7BCADE-2E6D-A855-BC44-CFCFF63F31BA">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>2490DE57-4302-BAE6-12BC-C41FA735716F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_PET_Pet_ID</notNullConstraintName>
+</Column>
+<Column name="PET_Pet_Name" id="3FC6CE95-864A-8F16-7DE5-649F609C5A57">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>0B18BB0F-A363-EC8A-615B-07578CF5DF71</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_PET_Pet_Name</notNullConstraintName>
+</Column>
+<Column name="PET_Pet_Birth_Date" id="630B8305-20C3-FF65-D1D6-FDE451D54E0D">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>F265FB7B-718B-9B57-8CEE-C5CC72EE825E</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F52EFBF0-9084-B844-756A-0D48CBFA5E97</domain>
+<defaultValue>&apos;11-JUL-1970&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_PET_Pet_Birth_Date</notNullConstraintName>
+</Column>
+<Column name="PET_Pet_Breed" id="6F3371D2-3768-B172-B4E6-68B53225CDB1">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>6A6A3DD1-9502-9023-DB90-AE5CFC1ECC2B</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_PET_Pet_Breed</notNullConstraintName>
+</Column>
+<Column name="PET_Pet_Type" id="85C6BDFB-AE94-CA63-9C99-2812A081DB49">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>5C09F71F-F8F2-3584-8DF4-822F9CDE7983</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<domain>C8F08D8C-5CCC-3AED-2603-5FE58004278D</domain>
+<defaultValue>&apos;D&apos;</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_PET_Pet_Type</notNullConstraintName>
+</Column>
+<Column name="PET_Pet_Sex" id="BE16592B-1B29-AFAF-F5C0-721EDB3E17E0">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>33D140EB-B1AB-9551-F9A0-101DFEC01DA2</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>&apos;U&apos;</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_PET_Pet_Sex</notNullConstraintName>
+</Column>
+<Column name="CAT_PET_Pet_ID" id="19D6120E-BFD4-1847-9ED3-73EB58651220">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B7AAAB1-42E1-C9A1-C199-084BAD794E08" referredColumn="2BF70309-434E-7AD8-61D7-2F37925713A5"/>
+</associations>
+</Column>
+<Column name="DOG_PET_Pet_ID" id="0580CFB0-24A6-970B-C8CC-AFB770722F60">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="831D1DE7-3ADC-5FE9-58B4-63E226D373F7" referredColumn="4A37959D-191C-375A-D5D1-2D1C8A4F2CDC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B420AB6-1E57-FEB0-FE99-8412D66D8929" name="HVK_Pet_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>7CACF0B2-7F6D-8D27-1821-63D5F52167BB</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B7BCADE-2E6D-A855-BC44-CFCFF63F31BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF8AFDDB-671F-1480-3171-5403923487F7" name="PET_CAT_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>64BD6641-2805-0BEB-8615-8D63078B1698</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19D6120E-BFD4-1847-9ED3-73EB58651220"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE1CEBC5-458B-0FA6-1324-8E346D07FE86" name="PET_DOG_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>BEEF99C2-5AC0-83EC-E14B-CEA89CCDDC4C</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0580CFB0-24A6-970B-C8CC-AFB770722F60"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AEC5E892-DCEE-26A8-8A6E-66A1D935B9A7" name="PET_CUST_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>76FDBF96-716F-B3EF-63F8-F0286E50ACCA</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51C1D4EA-C7CB-78F6-3CCF-488A3BC393A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

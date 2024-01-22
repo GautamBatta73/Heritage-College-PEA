@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D2371CD-2158-ABC4-C6BB-4CAA3AEBBFE6" name="Discount">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:07:24 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>DISC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Discount_ID" id="2CE07314-E7EB-158F-C204-64CA8AD7E480">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:20:30 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Discount_Type" id="7608F94E-A09F-4790-A191-376DA2BE9326">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:14:25 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35</dataTypeSize>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>35,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Discount_Percentage" id="8B342E57-2C67-9826-B215-C4DDFEDB145E">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:15:00 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="67FDB7C4-F496-E152-71B2-A15AB7D47080" name="Discount PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:14:55 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2CE07314-E7EB-158F-C204-64CA8AD7E480</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

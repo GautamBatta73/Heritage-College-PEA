@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3B12A5F2-B188-8214-2B66-678E044156BC" name="Reservation_Discount">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:08:58 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>RES_DESC</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reservation_ID" id="8B356E4D-7ED3-5206-9640-9513D9AE73B8">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:30 UTC</createdTime>
+<generatorID>E614B335-693F-8396-0917-67F8C9F91398</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>FB49FF91-48C5-5AF9-7E37-CF4360AA4753</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Discount_ID" id="96577125-9BF7-1659-CFD0-1455701E3024">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:20:37 UTC</createdTime>
+<generatorID>04CBC39F-B850-400A-8E52-4F4512311183</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>2CE07314-E7EB-158F-C204-64CA8AD7E480</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DAC65967-45D8-281A-4DC6-10832E883FF1" name="Reservation_Discount PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:03 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8B356E4D-7ED3-5206-9640-9513D9AE73B8</attributeRef>
+<attributeRef>96577125-9BF7-1659-CFD0-1455701E3024</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7601C2F1-1EBE-87BF-7B26-147FB2A865AB" name="HVK_Coop">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>3AF2B11F-EA0D-61B9-95AF-EAEA4FD2342E</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>COOP</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Coop_ID" id="4E7D5A3F-B4BB-F72F-275E-77B62579B567">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>96573F24-0FB4-748D-D64B-C7A1C84803F0</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_COOP_Coop_ID</notNullConstraintName>
+</Column>
+<Column name="Coop_Type" id="78E6B24A-1F8F-C178-8448-E59C9F10D6F9">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>5B7A6619-A482-F637-3653-BEFE08FE8167</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<domain>C8F08D8C-5CCC-3AED-2603-5FE58004278D</domain>
+<defaultValue>&apos;R&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_COOP_Coop_Type</notNullConstraintName>
+</Column>
+<Column name="Coop_Occupied" id="E2B37DC0-AC22-8BC4-0F08-778A48C7EB41">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>640F4CA4-4A59-4378-55B9-4AD794B06517</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<defaultValue>false</defaultValue>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_COOP_Coop_Occupied</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC3B950D-1ABC-9330-4BFC-1CCB2C82464F" name="HVK_Coop_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>CF596499-7426-03FA-1667-801544E72F69</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E7D5A3F-B4BB-F72F-275E-77B62579B567"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

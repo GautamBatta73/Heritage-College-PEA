@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BCFCAE3B-2F41-D437-B52A-494BCFC6B662" name="HVK_Note">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>2B8AA589-E4B5-1D49-771B-9D265E46E3E9</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>NOTE</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PET_PET_Pet_ID" id="467CC043-662C-A674-4C0A-CD3CC3AEB31E">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>50E317BF-F106-155F-DBB1-4983C2430CFE</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_NOTE_PET_PET_Pet_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="00FAC0FE-650B-8FE0-D121-DF65FB5A660B" referredColumn="8B7BCADE-2E6D-A855-BC44-CFCFF63F31BA"/>
+</associations>
+</Column>
+<Column name="Note_ID" id="09A8D038-B1A2-8129-0D11-183825C8CBE6">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>75BDA5CE-DF04-A4AB-E644-704C8CF9DC8A</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_NOTE_Note_ID</notNullConstraintName>
+</Column>
+<Column name="Note_Message" id="0C1DECC0-1ECC-4981-6736-C627C76B6393">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>C6589237-E7B1-F49F-CD3A-EB88E1F6FF3B</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<defaultValue>&apos;NO MESSAGE&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_NOTE_Note_Message</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="25DC0278-2A1D-2DD8-00BA-77C45F938A6F" name="HVK_Note_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>F3B0E038-ACD6-0E7F-8FE4-A071A412CA12</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09A8D038-B1A2-8129-0D11-183825C8CBE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4890348-EE3E-2CAB-517D-022058C9148A" name="NOTE_PET_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>46CEE4D2-83E2-2B6B-E184-772DE8C0BD5F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="467CC043-662C-A674-4C0A-CD3CC3AEB31E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

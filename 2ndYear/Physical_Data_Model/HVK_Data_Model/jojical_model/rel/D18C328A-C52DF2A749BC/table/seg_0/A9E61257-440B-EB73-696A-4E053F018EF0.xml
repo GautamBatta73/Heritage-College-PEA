@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9E61257-440B-EB73-696A-4E053F018EF0" name="HVK_Reserved_Run">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>A7062CDA-0B3D-EEA1-6EE3-E7302AEEC080</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>RES_RUN</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RES_Reservation_ID" id="5737FD2F-A021-84BD-8123-9B702EE34927">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>C1B4D023-6DEF-F8A2-A318-A63CC9C225B2</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_RUN_RES_Reservation_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="3FAA7E4B-1752-4005-5D55-CE2F8A95356F" referredColumn="8D13A58D-E766-C3F6-08A8-0B3E356B34D4"/>
+</associations>
+</Column>
+<Column name="RUN_Run_ID" id="8F2345CD-9F31-20EB-CBC0-C6F232F3DA37">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>631A7820-316F-A7FE-134A-89753BF6B5D8</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_RUN_RUN_Run_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="91E35445-2DC1-23B6-6A3B-5970F589AB08" referredColumn="AC50E1D5-318B-44D3-52ED-D1F02BF7F089"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C1D9139-CE5C-94CE-D045-8D6E61FAF0E2" name="HVK_Reserved_Run_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>380B78CE-D160-006A-CECE-98D5B482FFD5</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5737FD2F-A021-84BD-8123-9B702EE34927"/>
+<colUsage columnID="8F2345CD-9F31-20EB-CBC0-C6F232F3DA37"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B60C5B5A-7EA1-17B2-FC9E-1C98656433DD" name="RES_RUN_RES_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>875E20BE-5EDD-E869-0C5B-62952624A5CA</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5737FD2F-A021-84BD-8123-9B702EE34927"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AAD1C76B-1C2C-7649-2439-FE58FFE858EC" name="RES_RUN_RUN_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>9B6CA429-75E8-D6E6-E283-862A9D60C7F3</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F2345CD-9F31-20EB-CBC0-C6F232F3DA37"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

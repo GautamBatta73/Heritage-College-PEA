@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1DC37510-31C7-F965-0C5C-E1E27ED913B7" name="HVK_Reserved_Pet">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>B7789F0A-E47C-4D36-8472-0D556C3416F4</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>RES_PET</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PET_PET_Pet_ID" id="FBFA5D58-5CBD-7479-57AD-327BE59630A3">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>7B1AD39B-FC6D-03DB-E793-ECA8A0ACC3FC</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_PET_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="E8179209-CF88-3165-55D9-41A4293E3BD5" referredColumn="8B7BCADE-2E6D-A855-BC44-CFCFF63F31BA"/>
+</associations>
+</Column>
+<Column name="RES_Reservation_ID" id="53FDACA0-A8FD-8DBF-34F9-4481164B5B5B">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>8653B367-5C84-367E-B6E6-AE8018B05CD6</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_PET_RES_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="25CFA75A-868A-B1A7-1406-443A65644C04" referredColumn="8D13A58D-E766-C3F6-08A8-0B3E356B34D4"/>
+</associations>
+</Column>
+<Column name="HVK_Reserved_Pet_NUMBER" id="92B154C6-2CF2-97CB-B18A-41D93D43D013">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RES_PET_NUMBER</notNullConstraintName>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="HVK_Reserved_Pet_SharedWith" id="6A7AD20D-5865-2851-A377-5F37EB823DF8">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 19:02:58 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D7A7508D-85AF-7D46-BADF-0F12D3180563" name="RES_PET_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="92B154C6-2CF2-97CB-B18A-41D93D43D013"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3BBF122-727C-2174-4653-2ECC152AE3B7" name="RES_PET_PET_Pet_ID_RES_ID">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>2B9D235D-C26C-6245-5A2E-CB9FC152EAD0</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBFA5D58-5CBD-7479-57AD-327BE59630A3"/>
+<colUsage columnID="53FDACA0-A8FD-8DBF-34F9-4481164B5B5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D56EBC4-8231-1F07-CA99-FCE15C0D45E7" name="RES_PET_PET_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>472CDD5C-827A-7661-1D6B-D3FCA3A37640</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBFA5D58-5CBD-7479-57AD-327BE59630A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8C63934-1648-77B7-DFD4-7EFA02A2E7A9" name="RES_PET_RES_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>B62C3668-2BA1-4EA6-D605-2DDB90136045</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53FDACA0-A8FD-8DBF-34F9-4481164B5B5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

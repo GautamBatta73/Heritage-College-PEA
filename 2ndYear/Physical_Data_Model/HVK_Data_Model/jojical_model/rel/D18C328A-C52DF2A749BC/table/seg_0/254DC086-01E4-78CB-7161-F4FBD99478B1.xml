@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="254DC086-01E4-78CB-7161-F4FBD99478B1" name="HVK_Pet_Vaccination">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>92584C14-50EE-79D5-8C4E-CEAC455FAB30</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>PET_VAC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PET_Pet_ID" id="D4E1EA6B-1EEC-4639-FA32-E3F794543076">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>945B1530-451A-6B9D-D92C-16F78B7A4AC6</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_VAC_PET_PET_Pet_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="65D74D97-B4BF-F283-9DE8-4631CAB2D3D4" referredColumn="8B7BCADE-2E6D-A855-BC44-CFCFF63F31BA"/>
+</associations>
+</Column>
+<Column name="VAC_Name" id="3E12CE80-D4F5-E854-C9E7-B926E6BFD736">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>DC132BEC-83B8-99A4-316C-197A35BBA5BB</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_VAC_VAC_Name</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="27677043-260E-F27C-39EC-7F9219AFA9C6" referredColumn="56F39B29-1171-8C62-7A6F-FDDC11199BE2"/>
+</associations>
+</Column>
+<Column name="Pet_Expiry_Date" id="8807BEB4-2B4A-1917-5440-4B617595E1CD">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>21E15B6C-7307-D4C1-26AE-54D014BCD3A0</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F52EFBF0-9084-B844-756A-0D48CBFA5E97</domain>
+<defaultValue>&apos;05-SEPT-2001&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_PET_VAC_Expiry_Date</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6AA1252-1765-F310-EAD8-87DCCCFB68C7" name="HVK_Pet_Vaccination_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>F3BFE0FA-E239-C609-04F3-5A9223F5C87B</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4E1EA6B-1EEC-4639-FA32-E3F794543076"/>
+<colUsage columnID="3E12CE80-D4F5-E854-C9E7-B926E6BFD736"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B18978A-C034-87C5-22F6-E18C31907413" name="PET_VAC_VAC_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>634F0B3F-EF5B-4551-EA60-6B25CA468572</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E12CE80-D4F5-E854-C9E7-B926E6BFD736"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D815CDAA-EE68-76BF-1D03-B2DADA12DDCD" name="PET_VAC_PET_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>33B3FD45-0A7A-7181-A540-C50AFD23321D</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4E1EA6B-1EEC-4639-FA32-E3F794543076"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

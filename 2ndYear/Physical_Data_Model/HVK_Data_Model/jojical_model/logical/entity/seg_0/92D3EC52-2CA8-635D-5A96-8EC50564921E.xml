@@ -1,0 +1,212 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="92D3EC52-2CA8-635D-5A96-8EC50564921E" name="Customer">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:07:24 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>CUST</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Customer_ID" id="45F7637D-2F25-A0EB-4D6F-0B229C4ED2E6">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:31:08 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_First_Name" id="57EEE8BA-8372-62A8-D7B3-B15EF028BD42">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:31:30 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Last_Name" id="A6147121-D444-2DAF-C325-C9F9867B9AE8">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:32:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Home_Phone" id="ACB8250F-83E6-3C77-7643-958EFD672F2F">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:32:45 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<domain>F613E517-DA7F-5352-7F8E-0C9E260A04CE</domain>
+<defaultValue>&apos;111-111-1111&apos;</defaultValue>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Cell_Phone" id="C909EA2D-327E-BCC1-8468-14419E062F25">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:43:42 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<domain>F613E517-DA7F-5352-7F8E-0C9E260A04CE</domain>
+<defaultValue>&apos;111-111-1111&apos;</defaultValue>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Email" id="93725C4B-C869-BD59-5CDE-BBEF0A2CF893">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:33:02 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<domain>CF6738C1-F2C0-8820-499B-16A96B7B8ADC</domain>
+<defaultValue>&apos;bozo@email.com&apos;</defaultValue>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_House_No" id="C8A14342-9406-4688-1129-094422B06E33">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 13:22:47 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<defaultValue>&apos;-1&apos;</defaultValue>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Street" id="99EB0C27-65A4-C711-EC6D-E361522C4395">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:48:25 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_City" id="C7BED542-6593-7E49-9B21-33CAAE8AF461">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:48:30 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Province" id="FD19B18E-619D-569B-7D94-971A934B6393">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:48:42 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<defaultValue>&apos;OS&apos;</defaultValue>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Postal" id="EB0DC3FA-BA8A-B5D3-413F-2F56CE39AFC6">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:48:48 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<defaultValue>&apos;ABCDEF&apos;</defaultValue>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Emer_Phone" id="A73B1513-A06D-14C2-31B1-074C4EE686D6">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:49:06 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<domain>F613E517-DA7F-5352-7F8E-0C9E260A04CE</domain>
+<defaultValue>&apos;111-111-1111&apos;</defaultValue>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Emer_Email" id="B569B73F-5B6D-52B5-B10E-AC39DC60F79E">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:49:06 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<domain>CF6738C1-F2C0-8820-499B-16A96B7B8ADC</domain>
+<defaultValue>&apos;bozo@email.com&apos;</defaultValue>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Emer_First_Name" id="81D9C717-FFDD-5211-F41C-714613C446A5">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:36:17 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Emer_Last_Name" id="4A61EC7C-4CFC-4789-58B9-2D699CA09EA2">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:36:18 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C173786C-AE65-48A1-10C4-B0BB23961B64" name="Customer PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:31:19 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>45F7637D-2F25-A0EB-4D6F-0B229C4ED2E6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

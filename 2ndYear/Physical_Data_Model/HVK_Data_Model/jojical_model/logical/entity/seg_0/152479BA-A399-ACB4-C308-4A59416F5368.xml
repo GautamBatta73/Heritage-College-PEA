@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="152479BA-A399-ACB4-C308-4A59416F5368" name="Reserved_Medication">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:12:06 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>RES_MED</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Medication_ID" id="F510059E-D231-2CD2-B54B-A9E9E8DD5C00">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:28:59 UTC</createdTime>
+<generatorID>4134E3C6-E8B3-B7A5-C7CF-77714D97A0EE</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>36C5A7A8-7A45-139F-1C14-2287851640E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reserved_Medication_Dosage" id="E658BD91-A291-C2A4-F3EB-1F7769ADA15E">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:37:40 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reserved_Medication_Interval" id="685FF853-6EEF-445D-3615-7B0978B0A67F">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:39:30 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<defaultValue>24:30</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pet_ID" id="4FA525BA-883D-3786-0E7B-43A8CEC88C1A">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 15:43:45 UTC</createdTime>
+<generatorID>177051E5-069E-1DF0-A6A6-3BE85FF39639</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>2490DE57-4302-BAE6-12BC-C41FA735716F</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reserved_Medication_End_Date" id="1B081897-BD58-F529-C41C-33FFCBF84A57">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-19 16:30:41 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>F52EFBF0-9084-B844-756A-0D48CBFA5E97</domain>
+<defaultValue>05/SEPT/2001</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EA9CA01A-DE9D-007A-DA45-B32A8748AFFF" name="Reserved_Medication PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:03 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4FA525BA-883D-3786-0E7B-43A8CEC88C1A</attributeRef>
+<attributeRef>F510059E-D231-2CD2-B54B-A9E9E8DD5C00</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

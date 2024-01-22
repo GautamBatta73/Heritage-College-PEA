@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B8AA589-E4B5-1D49-771B-9D265E46E3E9" name="Note">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:07:24 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>NOTE</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Pet_ID" id="50E317BF-F106-155F-DBB1-4983C2430CFE">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:44:12 UTC</createdTime>
+<generatorID>46CEE4D2-83E2-2B6B-E184-772DE8C0BD5F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>2490DE57-4302-BAE6-12BC-C41FA735716F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Note_ID" id="75BDA5CE-DF04-A4AB-E644-704C8CF9DC8A">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:53:17 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Note_Message" id="C6589237-E7B1-F49F-CD3A-EB88E1F6FF3B">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:57:14 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<defaultValue>&apos;NO MESSAGE&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F3B0E038-ACD6-0E7F-8FE4-A071A412CA12" name="Note PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:54:06 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>75BDA5CE-DF04-A4AB-E644-704C8CF9DC8A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

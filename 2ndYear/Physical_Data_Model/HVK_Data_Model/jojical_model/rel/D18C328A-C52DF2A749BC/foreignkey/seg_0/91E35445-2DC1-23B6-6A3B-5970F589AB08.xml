@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="91E35445-2DC1-23B6-6A3B-5970F589AB08" containerWithKeyObject="A9E61257-440B-EB73-696A-4E053F018EF0" localFKIndex="AAD1C76B-1C2C-7649-2439-FE58FFE858EC" name="RES_RUN_RUN_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>9B6CA429-75E8-D6E6-E283-862A9D60C7F3</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referredTableLongName>HVK_Run</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>83D8DF73-F281-072F-D375-DD4A89796570</referredTableID>
+<keyObject>512AE434-C776-27A1-FC3A-5B986331E2CF</keyObject>
+<referredKeyID>512AE434-C776-27A1-FC3A-5B986331E2CF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Run_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21D8B961-F227-1497-ABA8-18873CAEF6BB" name="HVK_Service">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>2549B539-251C-D398-C549-7C1312DBAA56</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>SERV</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Service_ID" id="6735B6DF-6F8C-099A-A940-8C44D4BF7BDA">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>10E2B6AB-FC6F-9F20-BC5F-141E376FBAF4</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_SERV_Service_ID</notNullConstraintName>
+</Column>
+<Column name="Service_Type" id="06545C03-4D25-FB73-A284-E46E7142E340">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>BBBFBCB3-BA13-DAE6-4527-34C98DF3A16F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<domain>1F464289-5947-793F-2AF8-F6BF2188636F</domain>
+<defaultValue>&apos;Unknown&apos;</defaultValue>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_SERV_Service_Type</notNullConstraintName>
+</Column>
+<Column name="Service_Price" id="EF81F825-8B22-B6D3-9F04-B8F33175914F">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>FCCFA217-2374-4438-5733-AB06FF254BEB</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_SERV_Service_Price</notNullConstraintName>
+</Column>
+<Column name="RATE_Rate_Rate" id="0D95EA9E-6417-375A-9C2F-601CFF01D2C3">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>0D5A82A6-687F-8376-D8C5-32083F641625</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_SERV_RATE_Rate_Rate</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="26561CFE-F79C-D616-6E44-905E4C3FA628" referredColumn="4CC9466B-B5E3-AA4C-0347-18FEE2147F7B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5126FC32-A466-F2CF-85D9-E5C588FC57F2" name="HVK_Service_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>BB1E0C7B-A6A8-C1EC-2E21-F8BBC22C453F</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6735B6DF-6F8C-099A-A940-8C44D4BF7BDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D8DB952-4737-2D8C-46E6-A8D0E1A674BB" name="SERV_RATE_Rate_Rate_IDX">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5264BFB7-3062-F9E8-30B0-97F5448EDEEF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0D95EA9E-6417-375A-9C2F-601CFF01D2C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89D986BC-200B-3873-AE06-22992D312BE2" name="SERV_RATE_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>5264BFB7-3062-F9E8-30B0-97F5448EDEEF</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D95EA9E-6417-375A-9C2F-601CFF01D2C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

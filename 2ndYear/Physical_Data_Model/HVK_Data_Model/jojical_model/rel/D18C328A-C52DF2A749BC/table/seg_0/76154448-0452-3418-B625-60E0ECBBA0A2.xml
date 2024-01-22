@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76154448-0452-3418-B625-60E0ECBBA0A2" name="HVK_Rate">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>FE7A1ECD-9454-8F0E-90D4-B0DA38FEA764</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<abbreviation>RATE</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Rate_Rate" id="4CC9466B-B5E3-AA4C-0347-18FEE2147F7B">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>44479DCD-929C-BEB7-A963-30C4F4DB272D</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RATE_Rate_Rate</notNullConstraintName>
+</Column>
+<Column name="Rate_NumberOfCats" id="98BA12E2-2795-816B-692B-47C7607C310B">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>768C9139-E652-AA79-6B1B-98287FBD0294</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RATE_Rate_NumberOfCats</notNullConstraintName>
+</Column>
+<Column name="SERV_Service_ID" id="8CE3292F-E0EF-F7FB-9910-1A180A97C1BE">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>47362070-F819-5AB8-A57F-522F97E06D09</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_RATE_SERV_Service_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="9261E8B7-D1CB-3141-F920-8140D3BF5425" referredColumn="6735B6DF-6F8C-099A-A940-8C44D4BF7BDA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A981AF9F-81E0-60A1-C41F-35DA79EDAEDF" name="HVK_Rate_PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>31958470-BCCB-F38D-45EB-3109EBB49AB0</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CC9466B-B5E3-AA4C-0347-18FEE2147F7B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A2E35313-E9FD-D463-E9EA-1496282273BA" name="RATE_SERV_Service_ID_IDX">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5264BFB7-3062-F9E8-30B0-97F5448EDEEF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8CE3292F-E0EF-F7FB-9910-1A180A97C1BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38371770-7AB9-4042-A15E-8565292FDC3C" name="RATE_SERV_FK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-20 15:11:13 UTC</createdTime>
+<generatorID>5264BFB7-3062-F9E8-30B0-97F5448EDEEF</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CE3292F-E0EF-F7FB-9910-1A180A97C1BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

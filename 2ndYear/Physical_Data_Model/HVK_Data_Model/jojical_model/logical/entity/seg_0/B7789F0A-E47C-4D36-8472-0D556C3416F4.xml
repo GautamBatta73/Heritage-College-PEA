@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B7789F0A-E47C-4D36-8472-0D556C3416F4" name="Reserved_Pet">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:13:19 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>RES_PET</shortName>
+<createSurrogateKey>true</createSurrogateKey>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Pet_ID" id="7B1AD39B-FC6D-03DB-E793-ECA8A0ACC3FC">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:44:12 UTC</createdTime>
+<generatorID>472CDD5C-827A-7661-1D6B-D3FCA3A37640</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>2490DE57-4302-BAE6-12BC-C41FA735716F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reservation_ID" id="8653B367-5C84-367E-B6E6-AE8018B05CD6">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:30 UTC</createdTime>
+<generatorID>B62C3668-2BA1-4EA6-D605-2DDB90136045</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>FB49FF91-48C5-5AF9-7E37-CF4360AA4753</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2B9D235D-C26C-6245-5A2E-CB9FC152EAD0" name="Reserved_Pet PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:43:59 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7B1AD39B-FC6D-03DB-E793-ECA8A0ACC3FC</attributeRef>
+<attributeRef>8653B367-5C84-367E-B6E6-AE8018B05CD6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

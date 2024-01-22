@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A7062CDA-0B3D-EEA1-6EE3-E7302AEEC080" name="Reserved_Run">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 13:09:46 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>RES_RUN</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reservation_ID" id="C1B4D023-6DEF-F8A2-A318-A63CC9C225B2">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:30 UTC</createdTime>
+<generatorID>875E20BE-5EDD-E869-0C5B-62952624A5CA</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>FB49FF91-48C5-5AF9-7E37-CF4360AA4753</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Run_ID" id="631A7820-316F-A7FE-134A-89753BF6B5D8">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:23:35 UTC</createdTime>
+<generatorID>9B6CA429-75E8-D6E6-E283-862A9D60C7F3</generatorID>
+<ownerDesignName>jojical_model</ownerDesignName>
+<referedAttribute>4FAF0484-1BC3-3DE4-7314-4CBAFF7ADB3E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="380B78CE-D160-006A-CECE-98D5B482FFD5" name="Reserved_Run PK">
+<createdBy>2232517</createdBy>
+<createdTime>2023-10-06 14:12:03 UTC</createdTime>
+<ownerDesignName>jojical_model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C1B4D023-6DEF-F8A2-A318-A63CC9C225B2</attributeRef>
+<attributeRef>631A7820-316F-A7FE-134A-89753BF6B5D8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
