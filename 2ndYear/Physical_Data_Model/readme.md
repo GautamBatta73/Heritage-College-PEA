@@ -1,3 +1,5 @@
 # Happy Valley Kennels Database Model
 
-This the the databse file and physical model for the Happy Valley Kennels (HVK) Reservation System.
+This is the database file and physical model for the Happy Valley Kennels (HVK) Reservation System. <br>
+
+It was created in and is openable in Oracle Data Modeler.
