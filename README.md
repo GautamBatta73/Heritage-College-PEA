@@ -15,6 +15,6 @@ our knowledge.
 ### My Current Computer Science Courses:
   1. Web Programming IV
   2. Web Programming V
-  3. Database Management I
+  3. Database Management II
 
 ![math](https://user-images.githubusercontent.com/119340575/205943872-9c3b14a7-07db-4aac-a579-4cba24985b35.svg)
