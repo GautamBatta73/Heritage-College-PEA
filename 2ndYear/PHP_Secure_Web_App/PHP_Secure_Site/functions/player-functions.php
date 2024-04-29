@@ -5,6 +5,8 @@ function check_name(string $name): array {
 
     if (empty($name)) {
         $arr = [false, "This Name is required"];
+    } else if (strlen($name) > 50) {
+        $arr = [false, "This Name must be less than 50 characters"];
     } else if (!preg_match($pattern, $name)) {
         if (!preg_match("/^[a-z]/i", $name) || !preg_match("/[a-z]$/i", $name)) {
             $arr = [false, "This Name must start and end with a letter"];
@@ -18,12 +20,26 @@ function check_name(string $name): array {
     return $arr;
 }
 
+function check_nickname(string $nick): array {
+    $arr = [true, ""];
+
+    if (strlen($nick) > 50) {
+        $arr = [false, "Nickname must be less than 50 characters"];
+    } else if (str_contains($nick, "~")) {
+        $arr = [false, "Nickname cannot contain the character '~'"];
+    }
+
+    return $arr;
+}
+
 function check_city(string $city): array {
     $pattern = '/^[a-z][(a-z|\-|\s)]*[a-z]$/i';
     $arr = [true, ""];
 
     if (empty($city)) {
         $arr = [false, "City is required"];
+    } else if (strlen($city) > 50) {
+        $arr = [false, "City must be less than 50 characters"];
     } else if (!preg_match($pattern, $city)) {
         if (!preg_match("/^[a-z]/i", $city) || !preg_match("/[a-z]$/i", $city)) {
             $arr = [false, "City must start and end with a letter"];
@@ -102,6 +118,8 @@ function check_id(string $id): array {
     } else {
         if ((int)$id <= 0) {
             $arr = [false, "ID must be more than 0"];
+        } else if ((int)$id <= 999999) {
+            $arr = [false, "ID must be less than"];
         } else {
             $path = './data/players.txt';
             if (file_exists($path)) {

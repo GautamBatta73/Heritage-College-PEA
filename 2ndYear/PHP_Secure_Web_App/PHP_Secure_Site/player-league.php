@@ -4,8 +4,9 @@ declare(strict_types=1);
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-header("Content-Security-Policy: frame-ancestors 'none'; script-src 'self';");
-header('Access-Control-Allow-Origin: null;');
+
+// header("Content-Security-Policy: frame-ancestors 'none'; script-src 'none'; report-uri /csp-intrusions.php");
+// header('Access-Control-Allow-Origin: null;');
 session_start();
 
 include './functions/leader-functions.php';
@@ -14,9 +15,18 @@ require './classes/class-leader.php';
 require './classes/class-player.php';
 require './enums/enum-country.php';
 $player_list = null;
+
 if (isset($_SESSION["email"])) {
     $player_list = set_players($_SESSION["email"]);
 }
+
+if (isset($_SESSION["timeout"])) {
+    if ($_SESSION['timeout'] + 10 * 60 < time()) {
+        header("Location: player-league.php?action=logout");
+    }
+}
+
+$_SESSION['timeout'] = time();
 ?>
 
 <?php
@@ -49,6 +59,7 @@ if (isset($_POST["btnSubmitLogin"])) {
             $player_list = set_players($email);
             $error = false;
         } else {
+            intrusion_log("Invalid Username/Password");
             $error = true;
             if (isset($_SESSION["logged_in"])) {
                 unset($_SESSION["logged_in"]);
@@ -74,7 +85,7 @@ if (isset($_POST["btnSubmitLogin"])) {
     $error = (
         (!check_name($first_name)[0]) ||
         (!check_name($last_name)[0]) ||
-        (str_contains($nick_name, "~")) ||
+        (!check_nickname($nick_name)[0]) ||
         (!check_id($id)[0]) ||
         (!check_city($city)[0]) ||
         (!check_country($country)[0]) ||
@@ -157,9 +168,9 @@ if (isset($_GET["action"]) && !$action_done) {
             $is_professional = false;
             $img = "";
         } else if ($_GET["action"] === 'logout') {
-			session_destroy();
-			header("Location: player-league.php");
-		}
+            session_destroy();
+            header("Location: player-league.php");
+        }
     } else if ($_GET["action"] === 'addLeader') {
         $first_name = isset($_POST["fldFName"]) ? trim($_POST["fldFName"]) : "";
         $last_name = isset($_POST["fldLName"]) ? trim($_POST["fldLName"]) : "";
@@ -352,10 +363,10 @@ if (isset($_GET["action"]) && !$action_done) {
 
                         <section>
                             <label for="fldNName">Nickname: </label>
-                            <input name="fldNName" id="fldNName" type="text" value="<?= htmlspecialchars($nick_name) ?>" <?= ($error && str_contains($nick_name, "~")) ? 'class="error"' : "" ?>>
-                            <?php if ($error && str_contains($nick_name, "~")) : ?>
+                            <input name="fldNName" id="fldNName" type="text" value="<?= htmlspecialchars($nick_name) ?>" <?= ($error && !check_nickname($nick_name)[0]) ? 'class="error"' : "" ?>>
+                            <?php if ($error && !check_nickname($nick_name)[0]) : ?>
                                 <span class="error">
-                                    Nickname cannot contain the character '~'
+                                    <?= check_nickname($nick_name)[1] ?>
                                 </span>
                             <?php endif ?>
                         </section>
@@ -417,7 +428,7 @@ if (isset($_GET["action"]) && !$action_done) {
                     <?php if ($error && (
                         (check_name($first_name)[0]) &&
                         (check_name($last_name)[0]) &&
-                        (!str_contains($nick_name, "~")) &&
+                        (check_nickname($nick_name)[0]) &&
                         (check_city($city)[0]) &&
                         (check_country($country)[0]) &&
                         (check_image($img)[0])
@@ -461,10 +472,10 @@ if (isset($_GET["action"]) && !$action_done) {
 
                         <section>
                             <label for="fldNName">Nickname: </label>
-                            <input name="fldNName" id="fldNName" type="text" value="<?= htmlspecialchars($nick_name) ?>" <?= ($error && str_contains($nick_name, "~")) ? 'class="error"' : "" ?>>
-                            <?php if ($error && str_contains($nick_name, "~")) : ?>
+                            <input name="fldNName" id="fldNName" type="text" value="<?= htmlspecialchars($nick_name) ?>" <?= ($error && !check_nickname($nick_name)[0]) ? 'class="error"' : "" ?>>
+                            <?php if ($error && !check_nickname($nick_name)[0]) : ?>
                                 <span class="error">
-                                    Nickname cannot contain the character '~'
+                                    <?= check_nickname($nick_name)[1] ?>
                                 </span>
                             <?php endif ?>
                         </section>
@@ -526,7 +537,7 @@ if (isset($_GET["action"]) && !$action_done) {
                     <?php if ($error && (
                         (check_name($first_name)[0]) &&
                         (check_name($last_name)[0]) &&
-                        (!str_contains($nick_name, "~")) &&
+                        (check_nickname($nick_name)[0]) &&
                         (check_city($city)[0]) &&
                         (check_country($country)[0]) &&
                         (check_image($img)[0])

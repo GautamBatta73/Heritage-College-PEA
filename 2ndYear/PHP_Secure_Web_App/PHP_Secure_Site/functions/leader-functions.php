@@ -253,3 +253,13 @@ function delete_player(string $id, string $email): void {
         }
     }
 }
+
+function intrusion_log(string $message): void {
+    $path = "./intrusion-logs.txt";
+    $file = fopen($path, "a");
+    if ($file) {
+        $data = $message . ' | ' . date_format(new DateTime(), 'Y-m-d H:i:s') . "\n";
+        fwrite($file, $data);
+    }
+    fclose($file);
+}
