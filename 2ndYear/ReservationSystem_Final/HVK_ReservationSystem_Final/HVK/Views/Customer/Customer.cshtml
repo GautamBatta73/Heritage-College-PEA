@@ -1,0 +1,102 @@
+﻿@model HVK.Models.JoinCustomerReservationsPets
+@section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+        <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+        <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+        <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+    </ul>
+}
+<main>
+    <h3 class="text-center">Viewing @Model.Hvkuser.FirstName @Model.Hvkuser.LastName's Account</h3>
+    <div class="row staffDashDiv">
+      
+        <div class="col">
+            <h2 class="text-center">Your Information</h2>
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="fw-bold">Email:</span> @Model.Hvkuser.Email</li>
+                    <li class="list-group-item"><span class="fw-bold">Cell Phone #:</span> @Model.Hvkuser.CellPhone</li>
+                    <li class="list-group-item"><span class="fw-bold">Home Phone #:</span> @Model.Hvkuser.Phone</li>
+                    <li class="list-group-item"><span class="fw-bold">Address:</span> @Model.Hvkuser.Street</li>
+                    <li class="list-group-item"><span class="fw-bold">Postal Code:</span> @Model.Hvkuser.PostalCode</li>
+                    <li class="list-group-item"><span class="fw-bold">Province:</span> @Model.Hvkuser.Province</li>
+                    <li class="list-group-item"><span class="fw-bold">City:</span> @Model.Hvkuser.City</li>
+                    <li class="list-group-item"><span class="fw-bold">Emergency First Name:</span> @Model.Hvkuser.EmergencyContactFirstName</li>
+                    <li class="list-group-item"><span class="fw-bold">Emergency Last Name:</span> @Model.Hvkuser.EmergencyContactLastName</li>
+                    <li class="list-group-item"><span class="fw-bold">Emergency Phone #:</span> @Model.Hvkuser.EmergencyContactPhone</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Reservations Column -->
+        <div class="col">
+            <h2 class="text-center">Reservations</h2>
+            <div>
+                @foreach (var reservation in Model.Reservations)
+                {
+                    <section class="resSection">
+                        <div class="row">
+                            <div class="col align-self-center">
+                                <p>
+                                    <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                    <span class="fw-bold">@reservation.StartDate.ToString("yyyy/MM/dd")</span>
+                                </p>
+                                <p>
+                                    <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                    <span class="fw-bold">@reservation.EndDate.ToString("yyyy/MM/dd")</span>
+                                </p>
+                            </div>
+                            <!-- Pets -->
+                            <div class="col">
+                                @foreach (var petReservation in reservation.PetReservations)
+                                {
+                                    <p>
+                                        <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                        <span class="fw-bold"> @petReservation.Pet.Name</span>
+                                    </p>
+                                }
+                            </div>
+                            <!-- View Reservation Button -->
+                            <div class="col-2 doubleA">
+                                <a asp-controller="Reservations" asp-action="Details" asp-route-id="@reservation.ReservationId" class="startResBtn"><img src="~/Images/ViewResIcon.png" alt="View Res: " /></a>
+                                <a asp-controller="Reservations" asp-action="Edit" asp-route-id="@reservation.ReservationId" class="cancelResBtn"><img src="~/Images/EndResIcon.png" alt="End Res: " /></a>
+                            </div>
+                        </div>
+                    </section>
+                }
+            </div>
+        </div>
+
+        <!-- Pets Column -->
+        <div class="col">
+            <h2 class="text-center">Your Pets</h2>
+            <div>
+            <button class="top-home-page-button align-content-center"><a asp-controller="Pets" asp-action="Create">Add a Pet</a></button>
+                @foreach (var pet in Model.Pets)
+                {
+                    <section class="resSection">
+                        <div class="row">
+                            <!-- Pets -->
+
+                            <div class="col">
+
+                                <p>
+                                    <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                    <span class="fw-bold h5">@pet.Name</span>
+                                </p>
+
+                            </div>
+                            <div class="col-2 singleA">
+                                <a asp-controller="Pets" asp-action="Details" asp-route-id="@pet.PetId" class="viewResBtn"><img src="~/Images/ViewRes2Icon.png" alt="View Pet: " /></a>
+                            </div>
+
+                        </div>
+
+                    </section>
+                }
+            </div>
+        </div>
+        
+    </div>
+</main>

@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<main>
+
+
+    @model HVK.Models.Login
+    <h2 class="text-center">Login</h2>
+    <div class="container col-md-4 col-md-offset-4 border p-2" style="padding: 50px!important; border-radius:5px;">
+        @using (Html.BeginForm(FormMethod.Post, new { @class = "form" }))
+        {
+            <span>
+                @Html.ValidationSummary()
+            </span>
+            <div class="form-group">
+                @Html.ValidationMessageFor(x => x.UserEmail, "", new { @class = "text-danger" })
+                @Html.LabelFor(x => x.UserEmail)
+                @Html.TextBoxFor(x => x.UserEmail, new {@class = "form-control"})
+            </div>
+            <div class="form-group">
+                @Html.ValidationMessageFor(x => x.UserPassword, "", new { @class = "text-danger" })
+                @Html.LabelFor(x => x.UserPassword)
+                @Html.PasswordFor(x => x.UserPassword, new {@class = "form-control"})
+                @Html.ActionLink("Forgot Password?", "ForgotPassword", "Login", null, new { @class = "col disable" })
+            </div>
+            <div>
+                <input type="submit" value="Log In" class="btn-primary" /><br />
+                @Html.ActionLink("Create Account", "Index", "CreateAccountLogin", null, new { @class = "col disable" })
+            </div>
+
+        }
+    </div>
+</main>

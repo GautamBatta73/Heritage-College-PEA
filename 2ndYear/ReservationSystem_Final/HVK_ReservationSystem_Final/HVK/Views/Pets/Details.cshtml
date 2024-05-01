@@ -1,0 +1,145 @@
+﻿@model HVK.Models.Pet
+@inject HVK.Models.FormattingService DisplayFormat
+
+@{
+    ViewData["Title"] = "Details";
+    Hvkuser user = (Hvkuser)ViewData["HVKUserObj"];
+}
+@if (user.UserType == "Employee")
+{
+    @section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+            <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+            <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+            <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+        </ul>
+    }
+}
+<main role="main" class="pb-3">
+
+    <h3>Pet Information</h3>
+    <br />
+    <div class="row RunDetailsPets">
+        <br />
+        <div class="col-4">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Breed)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Breed)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Birthyear)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Birthyear)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DogSize)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DogSize)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Climber)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Climber)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Barker)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Barker)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SpecialNotes)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SpecialNotes)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Sterilized)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Sterilized)
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col-4">
+            <br />
+            <br />
+            <table class="table table-bordered border-dark table-light">
+                <thead>
+                    <tr>
+                        <th>Vaccination Name</th>
+                        <th>Expiry Date</th>
+                        <th>Checked</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.PetVaccinations)
+                    {
+                        // Check if the vaccine is valid, define backgroud-color and font based upon the validity of the dates for a specific vaccination.
+                        var vaccineDateCheck = item.VaccinationChecked && item.ExpiryDate.AddDays(-4) < DateTime.Now ? "bg-warning" : "text-reset";
+                        var vaccineChecked = item.VaccinationChecked ? "Yes" : "No";
+                        var VaccineStateInd = item.VaccinationChecked ? "bg-success" : "bg-danger";
+
+                        if (item.VaccinationChecked)
+                        {
+
+                            <tr class="">
+                                <td>@item.Vaccination.Name</td>
+                                <td class="@VaccineStateInd">@DisplayFormat.DateDisplay(item.ExpiryDate)</td>
+                                <td class="@vaccineDateCheck">@vaccineChecked</td>
+                                <td>@Html.ActionLink("Verify Vaccination", "Edit", "PetVaccinations", new { id = item.PetId, vaccID = item.VaccinationId })</td>
+                            </tr>
+                        } else
+                        {
+                            <tr class="invalid-feedback">
+                                <td>@item.Vaccination.Name</td>
+                                <td class="@VaccineStateInd">@DisplayFormat.DateDisplay(item.ExpiryDate)</td>
+                                <td class="@vaccineDateCheck">@vaccineChecked</td>
+                                <td>@Html.ActionLink("Validate Vaccination", "Edit", "PetVaccinations", new { id = item.PetId, vaccID = item.VaccinationId })</td>
+                            </tr>
+                        }
+
+                    }
+
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.PetId">Edit</a> |
+            @if (user.UserType == "Employee")
+            {
+                <a asp-controller="Customer" asp-action="Customer" asp-route-id="@Model.HvkuserId">Return To Customer Information</a>            } else
+            {
+                <a asp-controller="HomePage" asp-action="Index">Return To Dashboard</a>
+            }
+            @*     <a asp-controller="Customer" asp-action="Customer" asp-route-id="@Model?.HvkuserId">Back To The Customer Information</a> *@
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+</main>

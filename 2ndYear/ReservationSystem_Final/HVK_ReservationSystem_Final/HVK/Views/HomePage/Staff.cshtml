@@ -1,0 +1,242 @@
+﻿@{
+    ViewData["Title"] = "Staff Dashboard";
+}
+@section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+        <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+        <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+        <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+    </ul>
+}
+<main>
+<div class="row staffDashDiv">
+    <div class="col">
+        <h2>Leaving Today</h2>
+        <div>
+            @foreach (var item in (List<JoinPetReservationHvkuser>)ViewData["LeavingToday"])
+            {
+                <section class="resSection">
+                    <div class="row">
+                        <div class="col-5">
+                            <h3>@item.HvkUser.FirstName @item.HvkUser.LastName</h3>
+                            <p>
+                                <img src="~/Images/PhoneIcon.png" alt="Phone: " />
+                                @if (item.HvkUser.CellPhone != null)
+                                {
+                                    @item.HvkUser.CellPhone
+                                }
+                                else if (item.HvkUser.Phone != null)
+                                {
+                                    @item.HvkUser.Phone
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                            <p>
+                                <img src="~/Images/EmailIcon.png" alt="Email: " />
+                                @if (item.HvkUser.Email != null)
+                                {
+                                    @item.HvkUser.Email
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                            <p>
+                                <img src="~/Images/AddressIcon.png" alt="Address: " />
+                                @if (item.HvkUser.Street != null)
+                                {
+                                    @item.HvkUser.Street
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                        </div>
+                        <div class="col  align-self-center">
+                            <p>
+                                <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                @item.Reservation.StartDate.ToString("yyyy/MM/dd")
+                            </p>
+                            <p>
+                                <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                @item.Reservation.EndDate.ToString("yyyy/MM/dd")
+                            </p>
+                        </div>
+                        <div class="col">
+                            @foreach (var pet in item.Pets)
+                            {
+                                <p>
+                                    <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                    @pet.Name
+                                </p>
+                            }
+                        </div>
+
+                        <div class="col-2 singleA">
+                            <a title="View reservation details" asp-controller="Reservations" asp-action="Details" asp-route-id="@item.Reservation.ReservationId" class="viewResBtn"><img src="~/Images/ViewRes2Icon.png" alt="View Res: " /></a>
+                        </div>
+                    </div>
+                </section>
+            }
+        </div>
+    </div>
+    <div class="col">
+        <h2>Ongoing</h2>
+        <div>
+            @foreach (var item in (List<JoinPetReservationHvkuser>)ViewData["Ongoing"])
+            {
+                <section class="resSection">
+                    <div class="row">
+                        <div class="col-5">
+                            <h3>@item.HvkUser.FirstName @item.HvkUser.LastName</h3>
+                            <p>
+                                <img src="~/Images/PhoneIcon.png" alt="Phone: " />
+                                @if (item.HvkUser.CellPhone != null)
+                                {
+                                    @item.HvkUser.CellPhone
+                                }
+                                else if (item.HvkUser.Phone != null)
+                                {
+                                    @item.HvkUser.Phone
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                            <p>
+                                <img src="~/Images/EmailIcon.png" alt="Email: " />
+                                @if (item.HvkUser.Email != null)
+                                {
+                                    @item.HvkUser.Email
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                            <p>
+                                <img src="~/Images/AddressIcon.png" alt="Address: " />
+                                @if (item.HvkUser.Street != null)
+                                {
+                                    @item.HvkUser.Street
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                        </div>
+                        <div class="col  align-self-center">
+                            <p>
+                                <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                @item.Reservation.StartDate.ToString("yyyy/MM/dd")
+                            </p>
+                            <p>
+                                <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                @item.Reservation.EndDate.ToString("yyyy/MM/dd")
+                            </p>
+                        </div>
+                        <div class="col">
+                            @foreach (var pet in item.Pets)
+                            {
+                                <p>
+                                    <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                    @pet.Name
+                                </p>
+                            }
+                        </div>
+
+                        <div class="col-2 doubleA">
+                            <a title="View reservation details" asp-controller="Reservations" asp-action="Details" asp-route-id="@item.Reservation.ReservationId" class="startResBtn"><img src="~/Images/ViewResIcon.png" alt="View Res: " /></a>
+                            <a title="End reservation" asp-controller="Reservations" asp-action="Edit" asp-route-id="@item.Reservation.ReservationId" class="cancelResBtn"><img src="~/Images/EndResIcon.png" alt="End Res: " /></a>
+                        </div>
+                    </div>
+                </section>
+            }
+        </div>
+    </div>
+    <div class="col">
+        <h2>Starting Today</h2>
+        <div>
+                @foreach (var item in (List<JoinPetReservationHvkuser>)ViewData["StartingToday"])
+            {
+                <section class="resSection">
+                    <div class="row">
+                        <div class="col-5">
+                            <h3>@item.HvkUser.FirstName @item.HvkUser.LastName</h3>
+                            <p>
+                                <img src="~/Images/PhoneIcon.png" alt="Phone: " />
+                                @if (item.HvkUser.CellPhone != null)
+                                {
+                                    @item.HvkUser.CellPhone
+                                }
+                                else if (item.HvkUser.Phone != null)
+                                {
+                                    @item.HvkUser.Phone
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                            <p>
+                                <img src="~/Images/EmailIcon.png" alt="Email: " />
+                                @if (item.HvkUser.Email != null)
+                                {
+                                    @item.HvkUser.Email
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                            <p>
+                                <img src="~/Images/AddressIcon.png" alt="Address: " />
+                                @if (item.HvkUser.Street != null)
+                                {
+                                    @item.HvkUser.Street
+                                }
+                                else
+                                {
+                                    @("None")
+                                }
+                            </p>
+                        </div>
+                        <div class="col  align-self-center">
+                            <p>
+                                <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                @item.Reservation.StartDate.ToString("yyyy/MM/dd")
+                            </p>
+                            <p>
+                                <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                @item.Reservation.EndDate.ToString("yyyy/MM/dd")
+                            </p>
+                        </div>
+                        <div class="col">
+                            @foreach (var pet in item.Pets)
+                            {
+                                <p>
+                                    <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                    @pet.Name
+                                </p>
+                            }
+                        </div>
+
+                        <div class="col-2 doubleA">
+                                <a title="Start reservation" asp-controller="Reservations" asp-action="Edit" asp-route-id="@item.Reservation.ReservationId" class="startResBtn"><img src="~/Images/StartResIcon.png" alt="Start Res: " /></a>
+                                <a title="Cancel reservation" asp-controller="Reservations" asp-action="Delete" asp-route-id="@item.Reservation.ReservationId" class="cancelResBtn"><img src="~/Images/CancelResIcon.png" alt="Cancel Res: " /></a>
+                        </div>
+                    </div>
+                </section>
+            }
+        </div>
+    </div>
+</div>
+</main>

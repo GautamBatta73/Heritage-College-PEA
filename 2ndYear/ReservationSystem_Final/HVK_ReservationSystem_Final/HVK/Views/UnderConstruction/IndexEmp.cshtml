@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Under Construction";
+}
+@section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+        <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+        <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+        <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+    </ul>
+}
+<main role="main" class="pb-3">
+    <div>
+        <h3>Page Not Found!</h3>
+
+        <h6 class="fadeUnderConstruction"> This Page is Under Construction. Please Come Back Later.</h6>
+
+        <a asp-controller="HomePage" asp-action="Staff">Return To The Home Page</a>
+    </div>
+</main>

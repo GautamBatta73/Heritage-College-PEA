@@ -1,0 +1,69 @@
+﻿@model HVK.Models.JoinCustomerReservationsPets
+<main>
+    <div class="row staffDashDiv">
+        <!-- Reservations Column -->
+        <div class="col">
+            <h2 class="text-center">
+                @if (Model.Reservations.Count == 0)
+                {
+                    <text>You have 0 past reservations</text>
+                }
+                else
+                {
+                    <text>You have (@Model.Reservations.Count) reservations in the past</text>
+                }
+            </h2>
+            <div>
+                @if (Model.Reservations.Count > 0)
+                {
+                    @foreach (var reservation in Model.Reservations)
+                    {
+                        <section class="resSection">
+                            <div class="row">
+                                <div class="col align-self-center">
+                                    <p>
+                                        <img src="~/Images/PhoneIcon.png" alt="Start Date: " />
+                                        <span class="fw-bold">@Model.Hvkuser.Phone</span>
+                                    </p>
+                                    <p>
+                                        <img src="~/Images/EmailIcon.png" alt="Start Date: " />
+                                        <span class="fw-bold">@Model.Hvkuser.Email</span>
+                                    </p>
+                                    <p>
+                                        <img src="~/Images/AddressIcon.png" alt="Start Date: " />
+                                        <span class="fw-bold">@Model.Hvkuser.Street</span>
+                                    </p>
+
+                                </div>
+                                <div class="col align-self-center">
+                                    <p>
+                                        <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                        <span class="fw-bold">@reservation.StartDate.ToString("yyyy/MM/dd")</span>
+                                    </p>
+                                    <p>
+                                        <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                        <span class="fw-bold">@reservation.EndDate.ToString("yyyy/MM/dd")</span>
+                                    </p>
+                                </div>
+                                <!-- Pets -->
+                                <div class="col">
+                                    @foreach (var petReservation in reservation.PetReservations)
+                                    {
+                                        <p>
+                                            <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                            <span class="fw-bold"> @petReservation.Pet.Name</span>
+                                        </p>
+                                    }
+                                </div>
+                                <!-- View Reservation Button -->
+                                <div class="col-2 singleA">
+                                    <a asp-controller="Reservations" asp-action="Details" asp-route-id="@reservation.ReservationId" class="startResBtn"><img src="~/Images/ViewResIcon.png" alt="View Res: " /></a>
+                                </div>
+                            </div>
+                        </section>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</main>

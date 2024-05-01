@@ -1,0 +1,39 @@
+﻿@model HVK.Models.PetVaccination;
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<main role="main" class="pb-3">
+
+
+    <h3>PetVaccination</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ExpiryDate" class="control-label"></label>
+                    <input asp-for="ExpiryDate" class="form-control" />
+                    <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+                </div>
+                <input type="hidden" asp-for="VaccinationId" />
+                <input type="hidden" asp-for="PetId" />
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="VaccinationChecked" /> @Html.DisplayNameFor(model => model.VaccinationChecked)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-controller="Pets" asp-action="Details" asp-route-id="@Model.Pet.PetId">Return To The Pet Information</a>
+    </div>
+
+</main>

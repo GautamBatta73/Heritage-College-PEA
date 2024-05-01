@@ -1,0 +1,96 @@
+﻿@model HVK.Models.Run
+
+@{
+    ViewData["Title"] = "Run Details";
+    string status = "Unknown";
+    if (Model.Status == 1)
+    {
+        status = "Vacant";
+    }
+    else if (Model.Status == 2)
+    {
+        status = "Occupied";
+    }
+    else if (Model.Status == 3)
+    {
+        status = "Needs Cleaning";
+    }
+}
+
+@section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+        <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+        <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+        <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+    </ul>
+}
+
+<main>
+    <div class="RunDetails @(status == "Needs Cleaning" ? "ToClean" : status)">
+        <h2>@(Model.Size.ToUpper() == "L" ? "Large" : (Model.Size.ToUpper() == "R" ? "Regular" : "Unknown"))-Sized Run</h2>
+        <div class="RunDetailsPets">
+            @foreach (var petRes in Model.PetReservations)
+            {
+                <section class="PetRunSection row">
+                    <div class="col-5">
+                        <img src="~/Images/PetIcon.png" alt="Pet Icon" />
+                        <h3>@petRes.Pet.Name</h3>
+                    </div>
+
+                    <div class="col">
+                        <p>
+                            @petRes.Pet.Breed
+                        </p>
+                        <p>
+                            @(petRes.Pet.Gender == "M" ? "Male ♂" : "Female ♀")
+                        </p>
+                    </div>
+
+                    <div class="col-2 doubleA">
+                        <a asp-controller="Pets" asp-action="Details" asp-route-id="@petRes.PetId" class="viewPetBtn"><img src="~/Images/ViewRes2Icon.png" alt="View Pet: " /></a>
+                        <a href="#" class="delPetBtn" onclick="confirmDelete(@Model.RunId, @petRes.PetReservationId, '@petRes.Pet.Name')"><img src="~/Images/CancelResIcon.png" alt="Unassign Pet: " /></a>
+                    </div>
+                </section>
+            }
+        </div>
+        <section>
+            <p>@(Model.Location.ToUpper() == "F" ? "Faces the Front" : "Faces the Back")</p>
+            <p>@(Model.Covered ? "Covered" : "Not Covered")</p>
+            <form asp-action="Details">
+                <input type="hidden" name="RunId" value="@Model.RunId" />
+                <input type="hidden" name="Size" value="@Model.Size" />
+                <input type="hidden" name="Covered" value="@Model.Covered.ToString()" />
+                <input type="hidden" name="Location" value="@Model.Location" />
+                <label asp-for="Status">Status: </label>
+                <select asp-for="Status" onchange="this.form.submit()">
+                    <option value="1">Vacant</option>
+                    <option value="2">Occupied</option>
+                    <option value="3">To Be Cleaned</option>
+                </select>
+            </form>
+        </section>
+    </div>
+</main>
+<script>
+    function confirmDelete(RunId, PetResId, PetName) {
+        let dialog = document.createElement("dialog");
+        dialog.addEventListener("close", (e) => e.target.remove());
+        dialog.className = "confirmDialog";
+        dialog.innerHTML = `
+                <h3>Confirm Un-Assign?</h3>
+                <p>Are you sure you want to unassign <span class="fw-bold">${PetName}</span> from this run?</p>
+                <div>
+                    <form method="post" action="/Runs/Unassign">
+                        <input type="hidden" name="RunId" value="${RunId}" />
+                        <input type="hidden" name="PetResId" value="${PetResId}" />
+                        <button class="confirmYes">Yes</button>
+                    </form>
+                    <button class="confirmNo">No</button>
+                </div>
+            `;
+        dialog.querySelector(".confirmNo").addEventListener("click", () => dialog.close());
+        document.querySelector("main").appendChild(dialog);
+        dialog.showModal();
+    }
+</script>

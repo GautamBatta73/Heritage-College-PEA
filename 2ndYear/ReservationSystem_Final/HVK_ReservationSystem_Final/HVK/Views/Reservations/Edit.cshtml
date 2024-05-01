@@ -1,0 +1,67 @@
+﻿@model HVK.Models.Reservation
+
+@{
+    ViewData["Title"] = "Edit";
+    Hvkuser user = (Hvkuser)ViewData["HVKUserObj"];
+}
+@if (user.UserType == "Employee")
+{
+    @section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+            <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+            <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+            <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+        </ul>
+    }
+}
+
+<h1>Edit</h1>
+
+<h4>Reservation</h4>
+<hr />
+<div>
+    @if (user.UserType == "Employee")
+    {
+        <a asp-controller="HomePage" asp-action="Staff">Back to List</a>
+    }
+    else
+    {
+        <a asp-controller="HomePage" asp-action="Index">Back to List</a>
+    }
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="ReservationId" />
+            
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            @if (user.UserType == "Employee")
+            {
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label"></label>
+                    <input asp-for="Status" class="form-control" />
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+            }
+            else
+            {
+                <input type="hidden" asp-for="Status" />
+            }
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

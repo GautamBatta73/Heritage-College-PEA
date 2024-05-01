@@ -1,0 +1,114 @@
+﻿@model List<Hvkuser>
+
+@{
+    ViewData["Title"] = "Customer Search";
+    string search = (ViewData["Search"] ?? "").ToString();
+}
+
+@section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+        <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+        <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+        <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+    </ul>
+}
+<main>
+    <div class="custSearchPage">
+        <section class="top-bar">
+            <form asp-action="Index">
+                <div class="form-actions">
+                    <input type="search" name="searchString" placeholder="Search customers" value="@search" />
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <button type="button">
+                <a asp-controller="Hvkusers" asp-action="Create">Create Customer</a>
+            </button>
+        </section>
+        <section class="searchArea">
+            <h2>@(String.IsNullOrEmpty(search.Trim()) ? "Waiting for Search" : $"You Searched for \"{search}\"")</h2>
+            <div>
+                @if (ViewData.ContainsKey("ErrorMessage"))
+                {
+                    @ViewData["ErrorMessage"]
+                }
+                else if (String.IsNullOrEmpty(search.Trim()))
+                {
+                    <div class="imgDiv">
+                        <img src="~/Images/CustomerSearchIcon.png" alt="Waiting for your search..." />
+                    </div>
+                }
+                else if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        <section class="row custSection">
+                            <div class="col-sm-3">
+                                <h3>@item.FirstName @item.LastName</h3>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p>
+                                            <img src="~/Images/PhoneIcon.png" alt="Phone: " />
+                                            @if (item.CellPhone != null)
+                                            {
+                                                @item.CellPhone
+                                            }
+
+                                            else if (item.Phone != null)
+                                            {
+                                                @item.Phone
+                                            }
+                                            else
+                                            {
+                                                @("None")
+                                            }
+                                        </p>
+
+                                        <p>
+                                            <img src="~/Images/EmailIcon.png" alt="Email: " />
+                                            @if (item.Email != null)
+                                            {
+                                                @item.Email
+                                            }
+                                            else
+                                            {
+                                                @("None")
+                                            }
+                                        </p>
+
+                                        <p>
+                                            <img src="~/Images/AddressIcon.png" alt="Address: " />
+                                            @if (item.Street != null)
+                                            {
+                                                @item.Street
+                                            }
+                                            else
+                                            {
+                                                @("Unknown")
+                                            }
+                                        </p>
+                                    </div>
+
+                                    <div class="col">
+                                        @foreach (var pet in item.Pets)
+                                        {
+                                            <p>
+                                                <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                                @pet.Name
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 singleA">
+                                <a asp-controller="Customer" asp-action="Customer" asp-route-id="@item.HvkuserId" class="viewResBtn"><img src="~/Images/ViewRes2Icon.png" alt="View Customer: " /></a>
+                            </div>
+                        </section>
+                    }
+                }
+            </div>
+
+        </section>
+    </div>
+</main>

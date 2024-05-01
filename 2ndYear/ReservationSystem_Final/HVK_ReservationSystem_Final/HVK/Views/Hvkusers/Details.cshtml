@@ -1,0 +1,126 @@
+﻿@model HVK.Models.Hvkuser
+
+@{
+    ViewData["Title"] = "Details";
+}
+<main role="main" class="col-12 pb-3">
+
+
+    <div class="row object-fit-contain">
+    <h1 class="text-center">@($"{Model.FirstName} {Model.LastName}'s Account Information")</h1>
+    <hr />
+        <div class="col-md-10 offset-md-3">
+            <dl class="row align-items-center w-auto">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Street)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.Street)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Province)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.Province)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.PostalCode)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.CellPhone)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CellPhone)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.EmergencyContactFirstName)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.EmergencyContactFirstName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.EmergencyContactLastName)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.EmergencyContactLastName)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.EmergencyContactPhone)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.EmergencyContactPhone)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6 mx-auto"> 
+            <h3 class="text-center">@($"Pets Information")</h3>
+
+            <table class="table table-hover">
+                <tr>
+                    <th>Name</th>
+                    <th>Breed</th>
+                    <th>Size</th>
+                </tr>
+                @foreach (var pet in Model.Pets)
+                {
+                    <tr>
+                        <td>@pet.Breed</td>
+                        <td>@pet.DogSize</td>
+                        <td>@Html.ActionLink(@pet.Name, "Details", "Pets", new { id = @pet.PetId }, new { @class = "" })</td>
+                    </tr>
+                }
+            </table>
+            <a asp-action="Create" asp-controller="Pets" asp-route-id="@Model?.HvkuserId" class="btn-primary" style="float:right;">Add Pet</a>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6 offset-md-3">
+            <a asp-action="Edit" asp-route-id="@Model?.HvkuserId">Edit</a> |
+            <a asp-controller="Customer" asp-action="Customer" asp-route-id="@Model?.HvkuserId">Back To The Customer Information</a>
+        </div>
+    </div>
+
+</main>

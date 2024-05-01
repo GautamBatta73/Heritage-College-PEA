@@ -1,0 +1,95 @@
+﻿@model HVK.Models.Reservation
+@{
+    ViewData["Title"] = "Create Reservation";
+}
+
+<h1>Create Reservation</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-center">
+        <div class="inline-form-group">
+            <label asp-for="StartDate">Start Date</label>
+            <input asp-for="StartDate" class="form-control" type="date" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+        <div class="inline-form-group">
+            <label asp-for="EndDate">End Date</label>
+            <input asp-for="EndDate" class="form-control" type="date" />
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-center">
+        <h2>Select Pets</h2>
+        @foreach (var pet in ViewBag.Pets as List<HVK.Models.Pet>)
+        {
+            <div class="inline-form-group">
+                <label>
+                    <input type="checkbox" name="petIds" value="@pet.PetId" /> @pet.Name
+                </label>
+                <span asp-validation-summary="ModelOnly" class="text-danger"></span>
+            </div>
+        }
+    </div>
+
+    <div class="columns-container p-5">
+        @foreach (var pet in ViewBag.Pets as List<HVK.Models.Pet>)
+        {
+            <div class="pet-column">
+                <h3>@pet.Name</h3>
+                <div class="pet-info">
+                    <div class="services-section">
+                        <strong>Services</strong>
+                        @for (int i = 0; i < ViewBag.Services.Count; i++)
+                        {
+                            var service = ViewBag.Services[i] as HVK.Models.Service;
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"
+                                           name="petServices[@pet.PetId][]"
+                                           value="@service.ServiceId"
+                                    @(i == 0 ? "checked=\"checked\" disabled=\"disabled\"" : "") />
+                                    @service.ServiceDescription
+                                    @if (i == 0)
+                                    {
+                                        <input type="hidden" name="petServices[@pet.PetId][]" value="@service.ServiceId" />
+                                    }
+                                </label>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="vaccinations-section">
+                        <strong>Vaccinations</strong>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Expiry Date</th>
+                                    <th>Vaccination Checked</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var vaccination in pet.PetVaccinations)
+                                {
+                                    <tr class="@(vaccination.VaccinationChecked ? "vaccinated" : "not-vaccinated")">
+                                        <td>@vaccination.Vaccination.Name</td>
+                                        <td>@vaccination.ExpiryDate</td>
+                                        <td>@(vaccination.VaccinationChecked ? "Yes" : "No")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    </div>
+    <div class="btn-container">
+        <button type="submit" class="btn-primary">Create</button>
+    </div>
+</form>
+
+<a asp-controller="HomePage" asp-action="Index">Back to Home</a>

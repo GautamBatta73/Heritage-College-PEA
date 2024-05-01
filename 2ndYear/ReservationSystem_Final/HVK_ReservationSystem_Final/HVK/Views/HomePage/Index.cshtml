@@ -1,0 +1,105 @@
+﻿@model HVK.Models.Hvkuser
+@{
+    ViewData["Title"] = "Home Page";
+}
+<main>
+    <section class="top-home-page">
+        <h1>Welcome back @Model.FirstName @Model.LastName</h1>
+        <button>@Html.ActionLink("Create Reservation", "Create", "StartReservation", new { id = Model.HvkuserId}, new { title = "Create a reservation" })</button>
+    </section>
+    <div class="row staffDashDiv">
+        <div class="col">
+            <h2>Pets</h2>
+            <div class="pet-box-container">
+                @foreach (var pet in Model.Pets)
+                {
+                    <div class="pet-box">
+                        <div class="left">
+                            <p><span class="fw-bold">Name: </span>@pet.Name</p>
+                            <p><span class="fw-bold">Breed: </span>@pet.Breed</p>
+                            <p><span class="fw-bold">Sex: </span>@(pet.Gender == "F" ? "Female" : "Male")</p>
+                            <p><span class="fw-bold">Barker: </span>@(pet.Barker == false ? "No" : "Yes")</p>
+                            <p><span class="fw-bold">Climber: </span>@(pet.Climber == false ? "No" : "Yes")</p>
+                        </div>
+                        <div class="right">
+                            <button>@Html.ActionLink("Modify", "Edit", "Pets", new { id = pet.PetId}, new { title = "Modify pet information" })</button>
+                            <button>@Html.ActionLink("Remove", "Delete", "Pets", new { id = pet.PetId}, new { title = "Remove pet from account" })</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="col">
+            <h2>Current Reservations</h2>
+            <div>
+                @foreach (var item in (List<JoinPetReservationHvkuser>)ViewData["Current"])
+                {
+                    <section class="resSection reservation-box">
+                        <div class="left">
+                            <div class="col align-self-center">
+                                <p title="Start Date">
+                                    <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                    @item.Reservation.StartDate.ToString("yyyy/MM/dd")
+                                </p>
+                                <p title="End Date">
+                                    <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                    @item.Reservation.EndDate.ToString("yyyy/MM/dd")
+                                </p>
+                            </div>
+                            <div class="col">
+                                @foreach (var pet in item.Pets)
+                                {
+                                    <p>
+                                        <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                        @pet.Name
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button>@Html.ActionLink("Edit", "Edit", "Reservations", new { id = item.Reservation.ReservationId}, new { title = "Edit current reservation"})</button>
+                            <button>@Html.ActionLink("Cancel", "Delete", "Reservations", new { id = item.Reservation.ReservationId}, new { title = "Cancel current reservation"})</button>
+                        </div>
+                    </section>
+                }
+            </div>
+        </div>
+
+        <div class="col">
+            <h2>Future Reservations</h2>
+            <div>
+                @foreach (var item in (List<JoinPetReservationHvkuser>)ViewData["Future"])
+                {
+                    <section class="resSection reservation-box">
+                        <div class="left">
+                            <div class="col align-self-center">
+                                <p title="Start Date">
+                                    <img src="~/Images/StartDateIcon.png" alt="Start Date: " />
+                                    @item.Reservation.StartDate.ToString("yyyy/MM/dd")
+                                </p>
+                                <p title="End Date">
+                                    <img src="~/Images/EndDateIcon.png" alt="End Date: " />
+                                    @item.Reservation.EndDate.ToString("yyyy/MM/dd")
+                                </p>
+                            </div>
+                            <div class="col">
+                                @foreach (var pet in item.Pets)
+                                {
+                                    <p>
+                                        <img src="~/Images/PetIcon.png" alt="pet icon" />
+                                        @pet.Name
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button>@Html.ActionLink("Edit", "Edit", "Reservations", new { id = item.Reservation.ReservationId}, new { title = "Edit future reservation"})</button>
+                            <button>@Html.ActionLink("Cancel", "Delete", "Reservations", new { id = item.Reservation.ReservationId}, new { title = "Cancel future reservation"})</button>
+                        </div>
+                    </section>
+                }
+            </div>
+        </div>
+    </div>
+</main>

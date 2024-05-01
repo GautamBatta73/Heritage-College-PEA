@@ -1,0 +1,834 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    flex: 0 0 auto;
+    width: 100px;
+}
+
+    .logo img {
+        width: 100%;
+    }
+
+.title {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.fadeUnderConstruction {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.avatar {
+    flex: 0 0 auto;
+}
+
+    .avatar img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0.8em;
+    }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 1em;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+            }
+
+                nav ul li a:hover {
+                    background-color: #666;
+                    color: black;
+                }
+
+main {
+    padding: 20px;
+    background-color: #CCC;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+    footer a {
+        color: aqua;
+    }
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+.requiredLabel::before {
+    content: '*';
+    padding-right: 0.1em;
+}
+
+.requiredLabel::after {
+    content: 'required';
+    padding-left: 1em;
+}
+
+.requiredLabel::after, .requiredLabel::before {
+    font-size: 0.9em;
+    color: #aa0000;
+}
+
+.validation-summary-errors *, .field-validation-error {
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+}
+
+.validation-summary-errors ul {
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left
+}
+
+form * {
+    font-size: 1.01em;
+}
+
+form section, form div, form fieldset {
+    margin: 1em;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#formBtnDiv {
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+form a {
+    color: gray;
+    font-weight: bold;
+}
+
+form input[type="radio"] {
+    margin: 0 0.5em;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #6b6;
+    color: white;
+    border: black solid 0.1em;
+    border-radius: 15px;
+    padding: 0.1em 1em;
+    font-weight: bold;
+}
+
+form h1 {
+    font-size: 2em;
+}
+
+form h2 {
+    font-size: 1.7em;
+}
+
+form h3 {
+    font-size: 1.4em;
+}
+
+#displayPets > div {
+    margin: 1em;
+    border: black solid 0.5em;
+    padding: 0 1em 1em 1em;
+    width: fit-content;
+}
+
+.customers-index-container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+    .customers-index-container .container {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: lightgrey;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+        .customers-index-container .container h2 {
+            text-align: center;
+            font-size: 1em;
+        }
+
+    .customers-index-container .search {
+        grid-template-rows: 1fr 1fr 8fr 1fr;
+        padding: 10px 20px;
+    }
+
+        .customers-index-container .search .btn {
+            text-decoration: none;
+            background-color: white;
+            color: green;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 13px;
+            font-weight: bold;
+        }
+
+            .customers-index-container .search .btn:hover {
+                background-color: #f2f2f2;
+                color: darkgreen;
+            }
+
+
+        .customers-index-container .search input[type="text"] {
+            border-radius: 25px;
+            border: 1px solid #333;
+            padding: 10px;
+            margin: 8px 0px;
+        }
+
+.resSection, .custSection, .PetRunSection {
+    margin: 1em;
+    border-radius: 15px;
+    background-color: white;
+    padding: 0.5em;
+}
+
+    .resSection p, .custSection img {
+        font-size: 0.9em;
+    }
+
+    .resSection .doubleA, .resSection .singleA {
+        flex: 0 0 auto;
+        width: 10%;
+    }
+
+    .resSection img, .custSection img, .PetRunSection .doubleA > a.delPetBtn > img {
+        width: 2em;
+    }
+
+    .resSection .doubleA > a, .PetRunSection .doubleA > a {
+        font-size: 0.8em;
+        height: 50%;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .resSection .singleA > a, .custSection .singleA > a {
+        font-size: 1.5em;
+        height: 100%;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.viewResBtn {
+    background-color: #008db1;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.startResBtn {
+    background-color: #72bb53;
+    border-top-right-radius: 15px;
+}
+
+.viewPetBtn {
+    background-color: #008db1;
+    border-top-right-radius: 15px;
+}
+
+    .viewPetBtn > img {
+        width: 3em;
+    }
+
+.cancelResBtn, .delPetBtn {
+    border-bottom-right-radius: 15px;
+    background-color: #e54646;
+}
+
+.staffDashDiv > div, .searchArea, div.RunDetailsPets {
+    background-color: #a0a0a0;
+    border-radius: 15px;
+    padding: 0;
+}
+
+    .staffDashDiv > div > div, .searchArea > div {
+        height: 80vh;
+        overflow: auto;
+    }
+
+.staffDashDiv {
+    gap: 1.5em;
+}
+
+.custSearchPage .top-bar {
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .custSearchPage .top-bar button {
+        font-size: inherit;
+        font-weight: bold;
+    }
+
+.top-bar form button {
+    border: 0.1em solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.top-bar > button {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border-style: none;
+}
+
+.searchArea {
+    margin: 0 1em;
+}
+
+    .searchArea .imgDiv img {
+        width: 50%;
+    }
+
+    .searchArea .imgDiv {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+input[type="search"] {
+    border-radius: 5px;
+}
+
+.custSection .singleA, .PetRunSection .doubleA {
+    flex: 0 0 auto;
+    width: 5%;
+}
+
+.custSection {
+    justify-content: space-between;
+    margin: 1em 2em;
+}
+
+h3, h2 {
+    font-weight: bold;
+}
+
+.staffDashDiv h2, .searchArea h2, .RunsSection > div h3, .RunDetails h2, .confirmDialog h3 {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: white;
+    border-bottom: 0.1em solid black;
+    padding: 0.3em;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+/* Heraj's Customer Home Page section */
+.top-home-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 100px;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+    .top-home-page h1 {
+        font-weight: bolder;
+    }
+
+    .top-home-page button {
+        font-weight: bold;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        grid-column-start: 2;
+        border-style: none;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 100px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.major-box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    gap: 20px;
+    padding: 1em 0em 0.5em 0.5em;
+    border-radius: 15px;
+    background-color: white;
+    height: 700px;
+}
+
+    .major-box-container h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        padding-left: 0.5em;
+    }
+
+.pet-box-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #a0a0a0;
+    padding: 1em;
+    border-bottom-left-radius: 15px;
+}
+
+.pet-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+    .pet-box p {
+        margin: 0.2em 0;
+        display: contents;
+    }
+
+        .pet-box p:first-child {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: red;
+        }
+
+            .pet-box p:first-child span {
+                color: black;
+                font-weight: normal;
+            }
+
+    .pet-box > .left {
+        gap: 0;
+    }
+
+.reservation-box-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: grey;
+    padding: 1em;
+}
+
+.reservation-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px
+}
+
+.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    font-size: 0.7em;
+}
+
+    .right button:first-child {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: deepskyblue;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+        border-radius: 15px;
+        border-style: none;
+    }
+
+    .right button:last-child {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: crimson;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+        border-radius: 15px;
+        border-style: none;
+    }
+
+.logoutBtn {
+    background-color: red;
+    font-weight: bold;
+    color: white;
+}
+
+    .logoutBtn:hover {
+        background-color: maroon;
+    }
+
+button > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-weight: inherit;
+}
+
+button:hover, a:hover {
+    color: black;
+    filter: brightness(1.5);
+}
+
+.btn {
+    padding: 0;
+    line-height: 0;
+}
+
+button {
+    font-weight: bold;
+}
+
+.RunsPage .top-bar section, .RunsPage .top-bar div {
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.RunsPage .top-bar form, .RunDetails form {
+    flex-direction: row;
+}
+
+.RunsPage .top-bar form > div section {
+    gap: 1em;
+}
+
+.RunsPage .top-bar form > div > section:last-of-type {
+    margin: 0 1em;
+}
+
+.RunsPage .top-bar form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+    .RunsPage .top-bar form button {
+        font-size: 1.2em;
+    }
+
+        .RunsPage .top-bar form button:first-of-type {
+            background-color: beige;
+        }
+
+    .RunsPage .top-bar form input {
+        width: 1em;
+        filter: sepia(100%);
+        height: 0.7em;
+    }
+
+    .RunsPage .top-bar form > div {
+        width: fit-content;
+        padding: 0.5em 1em;
+        background-color: #a0a0a0;
+        gap: 1em;
+        border-radius: 15px;
+    }
+
+.RunsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 2em;
+    justify-items: center;
+}
+
+    .RunsSection > div {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        align-items: start;
+        text-align: center;
+        border-radius: 15px;
+        width: 18vw;
+        cursor: pointer;
+    }
+
+        .RunsSection > div div {
+            padding: 0em 1em;
+            text-align: left;
+        }
+
+            .RunsSection > div div:first-of-type {
+                font-weight: bold;
+                font-size: 2em;
+                align-self: center;
+                justify-self: center;
+            }
+
+.Unknown {
+    background-color: #888888;
+}
+
+.Vacant {
+    background-color: forestgreen;
+}
+
+.Occupied {
+    background-color: darkorange;
+}
+
+.ToClean {
+    background-color: cornflowerblue;
+}
+
+.RunPets img {
+    width: 3em;
+}
+
+.RunDetails {
+    border-radius: 15px;
+    margin: 0 3em;
+}
+
+    .RunDetails section {
+        display: flex;
+        font-weight: bold;
+        font-size: 1.5em;
+        justify-content: space-around;
+        margin: 1em 2em;
+    }
+
+    .RunDetails .RunDetailsPets {
+        max-height: 30em;
+        overflow: auto;
+    }
+
+div.RunDetailsPets {
+    margin: 1em 2em;
+}
+
+.PetRunSection > div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+    .PetRunSection > div:first-of-type h3 {
+        font-size: 2em;
+    }
+
+.PetRunSection p, .PetRunSection h3 {
+    margin: 0;
+}
+
+.PetRunSection > div:first-of-type, .PetRunSection > div:nth-of-type(2) {
+    align-self: center;
+}
+
+    .PetRunSection > div:first-of-type img {
+        width: 4em;
+    }
+
+.RunDetails section form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.RunDetails > section > form > select {
+    margin: 0.1em;
+}
+
+dialog.confirmDialog {
+    padding: 0;
+    border-radius: 15px;
+    background-color: #cccccc;
+    width: 30%;
+    text-align: center;
+}
+
+    dialog.confirmDialog > h3 {
+        font-size: 2.5em;
+    }
+
+    dialog.confirmDialog > p {
+        padding: 0 1em;
+        margin: 1em 0 0 0;
+        font-size: 2em;
+    }
+
+    dialog.confirmDialog button {
+        font-size: 2em;
+        margin: 1em;
+    }
+
+.confirmYes {
+    background-color: lime;
+}
+
+.confirmNo {
+    background-color: tomato;
+}
+
+dialog.confirmDialog > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(2px) brightness(80%);
+}
+
+
+.form-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inline-form-group {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.services-column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn-container {
+    text-align: center;
+    clear: both;
+    padding-top: 20px;
+}
+
+.pet-section {
+    margin-bottom: 20px; 
+}
+
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pet-column {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+.pet-info {
+    display: flex;
+    flex-direction: column; 
+}
+
+.services-section,
+.vaccinations-section {
+    margin-top: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc; 
+}
+
+    .table th {
+        background-color: #f2f2f2; 
+        border: 1px solid #ccc; 
+        padding: 8px;
+        text-align: left;
+    }
+
+    .table td {
+        border: 1px solid #ccc; 
+        padding: 8px;
+    }
+
+.vaccinated {
+    background-color: lightgreen;
+}
+
+.not-vaccinated {
+    background-color: lightcoral;
+}
+

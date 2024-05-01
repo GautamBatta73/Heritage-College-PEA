@@ -1,0 +1,74 @@
+﻿@model HVK.Models.ReservationPetsViewModel
+
+@{
+    ViewData["Title"] = "Select Pets and Services";
+}
+
+<h1>Create Reservation</h1>
+
+<hr />
+
+<form asp-action="CreatePets" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Reservation.StartDate" />
+            <input type="hidden" asp-for="Reservation.EndDate" />
+
+            
+        </div>
+
+        <div class="col-md-6">
+
+
+            @if (Model.Pets != null && Model.PetVaccinations != null)
+            {
+                int petIndex = 0;
+                foreach (var pet in Model.Pets)
+                {
+                    <h4>@pet.Name</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Vaccination Name</th>
+                                <th>Expiry Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var vaccination in Model.PetVaccinations[pet.PetId])
+                            {
+                                <tr class="@((vaccination.VaccinationChecked ? "table-success" : "table-warning"))">
+                                    <td>@(vaccination.Vaccination?.Name ?? "Unknown")</td>
+                                    <td>@vaccination.ExpiryDate.ToString("yyyy-MM-dd")</td>
+                                    <td>@(vaccination.VaccinationChecked ? "Verified" : "Pending")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div>
+                        <h5>Medication Details</h5>
+                        <input type="hidden" name="PetIds" value="@pet.PetId" />
+                        <label>Name:</label>
+                        <input type="text" name="MedicationName_@pet.PetId" placeholder="Medication Name" />
+                        <label>Dosage:</label>
+                        <input type="text" name="MedicationDosage_@pet.PetId" placeholder="Dosage" />
+                        <label>Special Instructions:</label>
+                        <input type="text" name="MedicationSpecialInstruct_@pet.PetId" placeholder="Special Instructions" />
+                        <label>End Date:</label>
+                        <input type="date" name="MedicationEndDate_@pet.PetId" />
+                    </div>
+                    petIndex++;
+                    
+                }
+            }
+            else
+            {
+                <p>No pet data available.</p>
+            }
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create Reservation" class="btn-primary" />
+        </div>
+    </div>
+</form>

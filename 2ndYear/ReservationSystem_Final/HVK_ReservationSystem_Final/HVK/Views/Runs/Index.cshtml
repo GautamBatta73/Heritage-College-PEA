@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Run>
+
+@{
+    ViewData["Title"] = "Run Allocation";
+}
+
+@section nav {
+    <ul>
+        <li>@Html.ActionLink("Dashboard", "Staff", "HomePage", null, new { title = "Go Home" })</li>
+        <li>@Html.ActionLink("Reservations", "IndexEmp", "UnderConstruction", null, new { title = "Go to Reservations" })</li>
+        <li>@Html.ActionLink("Runs", "Index", "Runs", null, new { title = "Go to Runs" })</li>
+        <li>@Html.ActionLink("Customer", "Index", "Customer", null, new { title = "Go to Customers" })</li>
+    </ul>
+}
+<main>
+    <div class="RunsPage">
+        <section class="top-bar">
+            <form asp-action="Index">
+                <div class="form-actions">
+                    <button type="button" onclick="location.href='/Runs'">Clear Filter</button>
+                    <section>
+                        <div>
+                            <input type="radio" name="VacancyRadio" id="VacantRadio" value="Vacant"
+                            @(ViewData["VacancyRadio"].ToString() == "Vacant" ? "checked" : "") />
+                            <label for="VacantRadio">Vacant</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="VacancyRadio" id="OccupiedRadio" value="Occupied"
+                            @(ViewData["VacancyRadio"].ToString() == "Occupied" ? "checked" : "") />
+                            <label for="OccupiedRadio">Occupied</label>
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <input type="checkbox" name="LargeCheck" id="LargeCheck"
+                            @(ViewData["LargeCheck"].ToString() == "on" ? "checked" : "") />
+                            <label for="LargeCheck">Large</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="RegCheck" id="RegCheck"
+                            @(ViewData["RegCheck"].ToString() == "on" ? "checked" : "") />
+                            <label for="RegCheck">Regular</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="MultiplePetCheck" id="MultiplePetCheck"
+                            @(ViewData["MultiplePetCheck"].ToString() == "on" ? "checked" : "") />
+                            <label for="MultiplePetCheck">Multiple Pets</label>
+                        </div>
+                    </section>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </section>
+        <section class="RunsSection">
+            @foreach (var item in Model)
+            {
+                string status = "Unknown";
+                if (item.Status == 1)
+                {
+                    status = "Vacant";
+                }
+                else if (item.Status == 2)
+                {
+                    status = "Occupied";
+                }
+                else if (item.Status == 3)
+                {
+                    status = "Needs Cleaning";
+                }
+                <div class="@(status == "Needs Cleaning" ? "ToClean" : status)" onclick="location.href=`/Runs/Details?id=${@item.RunId}`">
+                    <h3>@(item.Size.ToUpper() == "L" ? "Large" : (item.Size.ToUpper() == "R" ? "Regular" : "Unknown")) Size</h3>
+                    <div>
+                        @status
+                    </div>
+                    <div class="RunPets">
+                        @foreach (var pets in item.PetReservations)
+                        {
+                            <img src="~/Images/PetIcon.png" alt="pet icon" />
+                        }
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</main> 
