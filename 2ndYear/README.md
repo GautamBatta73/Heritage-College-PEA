@@ -16,8 +16,11 @@
 <h3>Second Semester</h3>
      
 #### 1. Web Programming IV
-     placehold
+     This course taught me a lot about web servers and security. I also learned how to use PHP, and effective ways of
+      preventing web application vulnerablilities.
 #### 2. Web Programming V
-     placehold
+     Web Programming V taught me a lot about creating dynamic websites with C# ans ASP.NET. I learned much about using ASP.NET for
+      web forms, and how to use a database with my website.
 #### 3. Database Management II
-     placehold
+     Database Management II taught me how to use advanced SQL structures such as stored procedures, functions, triggers, and cursors.
+      I was also taught to use T-SQL in SQL Server, and PL/SQL in Oracle.
