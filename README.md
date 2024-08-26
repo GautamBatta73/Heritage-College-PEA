@@ -5,7 +5,7 @@
 
 Heritage College
 
-Second-year Computer Science Student
+Third-year Computer Science Student
 
 
 The Program Exit Assessment is a portfolio to display what we have learned in this program.
