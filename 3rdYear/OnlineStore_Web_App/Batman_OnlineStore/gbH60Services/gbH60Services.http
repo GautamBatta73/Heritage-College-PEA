@@ -1,0 +1,6 @@
+@gbH60Services_HostAddress = http://localhost:5058
+
+GET {{gbH60Services_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

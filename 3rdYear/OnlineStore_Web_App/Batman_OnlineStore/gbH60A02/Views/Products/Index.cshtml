@@ -1,0 +1,83 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<gbH60A02.Model.JoinProductCategory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Products</h1>
+
+<p>
+    <a class="btn" asp-action="Create">Create New</a>
+</p>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <section class="prodCatSection">
+            <h3>@Html.DisplayFor(modelItem => item.ProdCat.ProdCat)</h3>
+            <section class="prodDiv">
+                @if (item.Products.Count() > 0)
+                {
+                    @foreach (var prod in item.Products)
+                    {
+                        <section class="prodSection @(prod.Stock < 1 ? "OutOfStock" : "")">
+                            <h3>@Html.DisplayFor(modelItem => prod.Name)</h3>
+                            <img alt="@prod.Name Image" src="@(prod.ImageURL ?? Url.Content("~/images/no_image.png"))" />
+                            @if (User.IsInRole("Manager"))
+                            {
+                                <div>
+                                    <form asp-action="Index" method="post">
+                                        <input type="hidden" name="ProductId" value="@prod.ProductId" />
+                                        <input type="hidden" name="ProdCatId" value="@prod.ProdCatId" />
+                                        <input type="hidden" name="Name" value="@prod.Name" />
+                                        <input type="hidden" name="Stock" value="@prod.Stock" />
+                                        <input type="hidden" name="BuyPrice" value="@prod.BuyPrice" />
+                                        <label asp-for="@prod.SellPrice">Price: </label>
+                                        <input asp-for="@prod.SellPrice" name="SellPrice" onchange="this.form.submit()" />
+                                    </form>
+                                    <form asp-action="Index" method="post">
+                                        <input type="hidden" name="ProductId" value="@prod.ProductId" />
+                                        <input type="hidden" name="ProdCatId" value="@prod.ProdCatId" />
+                                        <input type="hidden" name="Name" value="@prod.Name" />
+                                        <input type="hidden" name="SellPrice" value="@prod.SellPrice" />
+                                        <input type="hidden" name="BuyPrice" value="@prod.BuyPrice" />
+                                        <label asp-for="@prod.Stock">Stock: </label>
+                                        <input asp-for ="@prod.Stock" name="Stock" onchange="this.form.submit()" />
+                                    </form>
+                                </div>
+                            } else
+                            {
+                                <div id="clerkPriceStock" class="@(prod.Stock < 1 ? "OutOfStock" : "")">
+                                    <section>
+                                        <span class="bold">@Html.DisplayNameFor(modelItem => prod.SellPrice):</span>
+                                        @Html.DisplayFor(modelItem => prod.SellPrice)
+                                    </section>
+                                    <section>
+                                        <span class="bold">@Html.DisplayNameFor(modelItem => prod.Stock):</span>
+                                        @Html.DisplayFor(modelItem => prod.Stock)
+                                    </section>
+
+                                </div>
+                            }
+                            <div>
+                                <a class="btn" asp-action="Edit" asp-route-id="@prod.ProductId">Edit</a>
+                                <span>|</span>
+                                <a class="btn" asp-action="Details" asp-route-id="@prod.ProductId">Details</a>
+                                <span>|</span>
+                                <a class="btn" asp-action="Delete" asp-route-id="@prod.ProductId">Delete</a>
+                            </div>
+                        </section>
+                    }
+                }
+                else
+                {
+                    <section class="prodSection">
+                        <h3>@("No Products")</h3>
+                    </section>
+                }
+            </section>
+        </section>
+    }
+</div>
+;

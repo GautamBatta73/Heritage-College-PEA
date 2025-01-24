@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<gbH60Customer.DTO.JoinProductCategoryDTO>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["CustId"] = ViewData["CustId"] ?? 0;
+}
+
+<h1>Products</h1>
+
+<section id="search">
+    <form asp-action="Index">
+        <input type="search" name="name" value="@(ViewData["name"] ?? "")" />
+        <button type="submit">⌕</button>
+    </form>
+</section>
+
+<div>
+    @if (Model.Count() > 0)
+    {
+        @foreach (var item in Model)
+        {
+            <section class="prodCatSection">
+                <h3>@Html.DisplayFor(modelItem => item.ProdCat.ProdCat)</h3>
+                <section class="prodDiv">
+                    @if (item.Products.Count() > 0)
+                    {
+                        @foreach (var prod in item.Products)
+                        {
+                            <section class="prodSection @(prod.Stock < 1 ? "OutOfStock" : "")">
+                                <h3>@Html.DisplayFor(modelItem => prod.Name)</h3>
+                                <img alt="@prod.Name Image" src="@(prod.ImageURL ?? Url.Content("~/images/no_image.png"))" onerror="this.src='/images/no_image.png';this.onerror='';" loading="lazy" />
+                                <div id="clerkPriceStock" class="@(prod.Stock < 1 ? "OutOfStock" : "")">
+                                    <section>
+                                        <span class="bold">@Html.DisplayNameFor(modelItem => prod.SellPrice):</span>
+                                        @Html.DisplayFor(modelItem => prod.SellPrice)
+                                    </section>
+                                    <section>
+                                        <span class="bold">@Html.DisplayNameFor(modelItem => prod.Stock):</span>
+                                        @Html.DisplayFor(modelItem => prod.Stock)
+                                    </section>
+
+                                </div>
+                                <div>
+                                    <a class="btn" asp-action="Details" asp-route-id="@prod.ProductId">Details</a>
+                                    <button class="btn" onclick="localStorage.setItem('isAnimation', 'true');addToCart(@ViewData["CustId"], @prod.ProductId)" @(prod.Stock < 1 ? "disabled" : "")>Add to Cart</button>
+                                </div>
+                            </section>
+                        }
+                    }
+                    else
+                    {
+                        <section class="prodSection">
+                            <h3>@("No Products")</h3>
+                        </section>
+                    }
+                </section>
+            </section>
+        }
+    }
+    else
+    {
+        <section class="prodCatSection">
+            <h3>None Found!</h3>
+        </section>
+    }
+</div>

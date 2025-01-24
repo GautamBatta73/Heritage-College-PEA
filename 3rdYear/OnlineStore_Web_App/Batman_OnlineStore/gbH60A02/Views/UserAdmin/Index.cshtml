@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject Microsoft.AspNetCore.Identity.UserManager<IdentityUser>  _user;
+@model IEnumerable<IdentityUser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>User Management</h1>
+
+<a href="@Url.Action("Create")" class="btn btn-primary">Create New User</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            var role = ((await _user.GetRolesAsync(user)).FirstOrDefault() ?? "Customer");
+            <tr>
+                <td>@user.Email</td>
+                <td>@role</td>
+                <td id="prodCatBtns">
+                    <a href="@Url.Action("Edit", new { id = user.Id })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = user.Id })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

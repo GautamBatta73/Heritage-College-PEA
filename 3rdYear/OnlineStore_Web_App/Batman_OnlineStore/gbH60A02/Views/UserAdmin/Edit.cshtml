@@ -1,0 +1,41 @@
+﻿@model gbH60A02.Areas.Identity.Models.EditUserViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit User</h1>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label>Email</label>
+        <p>@Model.User.Email</p>
+    </div>
+
+    @if (!Model.UserRole.Equals("Customer"))
+    {
+        <div class="form-group">
+            <label>Roles</label>
+            @foreach (var role in Model.AvailableRoles)
+            {
+                string id = role + "Radio";
+                <div>
+                    <input type="radio" value="@role" id="@id" name="selectedRole" @((Model.UserRole).Equals(role) ? "checked" : "") />
+                    <label for="@id">@role</label>
+                </div>
+            }
+        </div>
+    }
+
+    <div class="form-group">
+        <label asp-for="NewPassword">Set Password</label>
+        <input asp-for="NewPassword" class="form-control" />
+        <span asp-validation-for="NewPassword" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,61 @@
+﻿@using gbH60Customer.DTO
+@using gbH60Customer.Model;
+
+@model ProductCategory
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["CustId"] = ViewData["CustId"] ?? 0;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product Category</h4>
+    <hr />
+    <section class="prodCatSection">
+        <h3>
+            @Html.DisplayFor(modelItem => Model.ProdCat)
+            <img alt="@Model.ProdCat Image" src="@(Model.ImageURL ?? Url.Content("~/images/no_image.png"))" onerror="this.src='~/images/no_image.png';this.onerror='';" loading="lazy" />
+        </h3>
+        <section class="prodDiv">
+            @if (((IEnumerable<ProductDTO>)ViewData["Products"])?.Any() ?? false)
+            {
+                @foreach (var prod in ((IEnumerable<ProductDTO>)ViewData["Products"]))
+                {
+                    <section class="prodSection @(prod.Stock < 1 ? "OutOfStock" : "")">
+                        <h3>@Html.DisplayFor(modelItem => prod.Name)</h3>
+                        <img alt="@prod.Name Image" src="@(prod.ImageURL ?? Url.Content("~/images/no_image.png"))" onerror="this.src='/images/no_image.png';this.onerror='';" loading="lazy" />
+                        <div>
+                            <div class="descriptionDiv">
+                                @Html.DisplayFor(modelItem => prod.Description)
+                            </div>
+
+                            <div>
+                                <span class="bold">@Html.DisplayNameFor(modelItem => prod.SellPrice):</span>
+                                @Html.DisplayFor(modelItem => prod.SellPrice)
+                            </div>
+                            <div>
+                                <span class="bold">@Html.DisplayNameFor(modelItem => prod.Stock):</span>
+                                @Html.DisplayFor(modelItem => prod.Stock)
+                            </div>
+                        </div>
+                        <div>
+                            <a class="btn" asp-action="Details" asp-route-id="@prod.ProductId">Details</a>
+                            <button class="btn" onclick="addToCart(@ViewData["CustId"], @prod.ProductId)" @(prod.Stock < 1 ? "disabled" : "")>Add to Cart</button>
+                        </div>
+                    </section>
+                }
+            }
+            else
+            {
+                <section class="prodSection">
+                    <h3>@("No Products")</h3>
+                </section>
+            }
+        </section>
+    </section>
+</div>
+<div>
+    <a class="btn" asp-action="Index">Back to List</a>
+</div>

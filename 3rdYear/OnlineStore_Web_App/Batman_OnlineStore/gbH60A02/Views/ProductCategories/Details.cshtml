@@ -1,0 +1,56 @@
+﻿@using gbH60A02.Model;
+
+@model ProductCategory
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product Category</h4>
+    <hr />
+    <section class="prodCatSection">
+        <h3>
+            @Html.DisplayFor(modelItem => Model.ProdCat)
+            <img alt="@Model.ProdCat Image" src="@(Model.ImageURL ?? Url.Content("~/images/no_image.png"))" />
+        </h3>
+        <section class="prodDiv">
+            @if (((IEnumerable<Product>)ViewData["Products"])?.Any() ?? false)
+            {
+                @foreach (var prod in ((IEnumerable<Product>)ViewData["Products"]))
+                {
+                    <section class="prodSection @(prod.Stock < 1 ? "OutOfStock" : "")">
+                        <h3>@Html.DisplayFor(modelItem => prod.Name)</h3>
+                        <img alt="@prod.Name Image" src="@(prod.ImageURL ?? Url.Content("~/images/no_image.png"))" />
+                        <div>
+                            <div class="descriptionDiv">
+                                @Html.DisplayFor(modelItem => prod.Description)
+                            </div>
+
+                            <div>
+                                <span class="bold">@Html.DisplayNameFor(modelItem => prod.SellPrice):</span>
+                                @Html.DisplayFor(modelItem => prod.SellPrice)
+                            </div>
+                            <div>
+                                <span class="bold">@Html.DisplayNameFor(modelItem => prod.Stock):</span>
+                                @Html.DisplayFor(modelItem => prod.Stock)
+                            </div>
+                        </div>
+                    </section>
+                }
+            }
+            else
+            {
+                <section class="prodSection">
+                    <h3>@("No Products")</h3>
+                </section>
+            }
+        </section>
+    </section>
+</div>
+<div>
+    <a class="btn" asp-action="Edit" asp-route-id="@Model?.CategoryId">Edit</a> |
+    <a class="btn" asp-action="Index">Back to List</a>
+</div>
