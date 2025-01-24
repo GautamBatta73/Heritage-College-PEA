@@ -19,7 +19,7 @@
        engage and interact with clients to gather requirements, present the outcome and validate their work through user acceptance 
        testing.
 #### 4. Advanced Topics in Computer Science I
-      This course focused on code efficiency, robustness, refactoring and maintainability. We perform code reviews andlearned to 
+      This course focused on code efficiency, robustness, refactoring and maintainability. We perform code reviews and learned to 
        critique others’ code. We learned to use Python to solve a variety of computer-based problems and perform data analysis 
        operations. I also complete a research assignment on a topic in Computer Science, with mine being on "DNA Data Storage".
 <br>
