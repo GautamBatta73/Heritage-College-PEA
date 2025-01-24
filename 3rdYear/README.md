@@ -25,7 +25,7 @@
 <br>
 <h3>Second Semester</h3>
      
-#### 1. Development Project I
+#### 1. Development Project II
      TBD
 #### 2. IT Security
      TBD
