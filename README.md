@@ -12,7 +12,9 @@ This portfolio will be helpful when we apply for jobs, as we will have something
 our knowledge.
 
 <hr>
+
 # The Heritage Computer Science Program
+
 ## First Year
 Programming I<br>
 Web Programming I<br>
@@ -45,6 +47,7 @@ IT Security<br>
 Database Management II<br>
 
 <hr>
+
 ### My Current Computer Science Courses:
   1. Development Project I
   2. IT Security
