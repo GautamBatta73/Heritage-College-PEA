@@ -7,11 +7,11 @@ Heritage College
 
 Third-year Computer Science Student
 
-
 The Program Exit Assessment is a portfolio to display what we have learned in this program.
 This portfolio will be helpful when we apply for jobs, as we will have something to show 
 our knowledge.
 
+<hr>
 # The Heritage Computer Science Program
 ## First Year
 Programming I<br>
@@ -44,7 +44,7 @@ Advanced Topics in Computer Science II<br>
 IT Security<br>
 Database Management II<br>
 
-
+<hr>
 ### My Current Computer Science Courses:
   1. Development Project I
   2. IT Security
