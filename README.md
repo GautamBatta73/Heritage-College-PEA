@@ -42,7 +42,7 @@ Systems Maintenance<br>
 ---<br>
 Advanced Topics in Computer Science II<br>
 IT Security<br>
-Database Management II<br>>
+Database Management II<br>
 
 
 ### My Current Computer Science Courses:
