@@ -44,12 +44,12 @@ Systems Maintenance<br>
 ---<br>
 Advanced Topics in Computer Science II<br>
 IT Security<br>
-Database Management II<br>
+Development Project II<br>
 
 <hr>
 
 ### My Current Computer Science Courses:
-  1. Development Project I
+  1. Development Project II
   2. IT Security
   3. Advanced Topics in Computer Science II
 
