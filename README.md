@@ -53,9 +53,12 @@ Development Project II<br>
   2. IT Security
   3. Advanced Topics in Computer Science II
 
-### Personal Projects:
+
+![math](https://user-images.githubusercontent.com/119340575/205943872-9c3b14a7-07db-4aac-a579-4cba24985b35.svg)
+
+<hr>
+
+# Personal Projects:
 &emsp; SidGautamJS: A fully-functioning JavaScript library. It works very well and can be useful, but it has a steep learning curve. [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/JavaScript)<br>
 &emsp; SidGautamAI: A great ChatGPT alternative, using DeepSeek and Llama. It works very well and has a simple and pretty UI. [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/AI_Chat_Assistant)<br>
 &emsp;&emsp; &emsp; &emsp; &emsp; &emsp; Currently Deployed at [SidGautamAI.glitch.me](https://sidgautamai.glitch.me)
-
-![math](https://user-images.githubusercontent.com/119340575/205943872-9c3b14a7-07db-4aac-a579-4cba24985b35.svg)
