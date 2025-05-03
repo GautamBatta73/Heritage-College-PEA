@@ -59,6 +59,19 @@ Development Project II<br>
 <hr>
 
 # Personal Projects:
-&emsp; SidGautamJS: A fully-functioning JavaScript library. It works very well and can be useful, but it has a steep learning curve. [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/JavaScript)<br>
-&emsp; SidGautamAI: A great ChatGPT alternative, using DeepSeek and Llama. It works very well and has a simple and pretty UI. [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/AI_Chat_Assistant)<br>
-&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; Currently Deployed at [SidGautamAI.glitch.me](https://sidgautamai.glitch.me)
+
+<br>
+
+## SidGautamJS: 
+A fully-functioning JavaScript library. It works very well and can be useful, but it has a steep learning curve. 
+
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/JavaScript)
+
+<br>
+
+## SidGautamAI: 
+A great ChatGPT alternative, using DeepSeek and Llama. It works very well and has a simple and pretty UI. 
+
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/AI_Chat_Assistant)<br>
+
+Currently Deployed at [SidGautamAI.glitch.me](https://sidgautamai.glitch.me)
