@@ -10,4 +10,4 @@ The stock will be decreased and it will say you bought a product (Unfortunatly, 
 There is even staff and admin accounts/features that allow you to manage the products, orders, categories, and more.
 It has uses C#, REST Services and JavaScript for its functionality. It looks very pretty but does not work on mobile.<br><br>
 
-<img src="https://github.com/HeritageCollegeClassroom/2022-program-exit-assessment-GautamBatta73/assets/119340575/e75a8c09-ccdb-4544-9718-30711f768111" alt="Screenshot of Website" style="width: 50em;"></img>
+<img src="https://github.com/user-attachments/assets/e0450c2c-dc2f-4b77-ae65-1ad5f1b1b46b" alt="Screenshot of Website" style="width: 50em;"></img>
