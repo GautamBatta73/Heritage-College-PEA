@@ -26,8 +26,14 @@
 <h3>Second Semester</h3>
      
 #### 1. Development Project II
-     TBD
+     In this course, we continued development from Development Project I, working in teams to design, code, test, document, and manage
+      the project until it's ready for production.
 #### 2. IT Security
-     TBD
+     In this course, I was introduced to current trends and issues related to computer security. From personal to corporate level 
+      IT security, this course included topics such as: analyzing potential security risks, recognizing and preventing threats. 
+      I conducted vulnerability and design analysis on wide variety of scenarios in order to improve IT security.
 #### 3. Advanced Topics in Computer Science II
-     TBD
+     In this course, I studied recent developments and topics of interest in Computer Science, including the Internet of Things. I 
+      developed and deployed Python and JavaScript applications connected to programmable devices (Raspberry PI); conducted data 
+      gathering, analysis, and visualization; learned how to use a NoSQL database such as MongoDB; and learned the basics of machine 
+      learning using data. 
