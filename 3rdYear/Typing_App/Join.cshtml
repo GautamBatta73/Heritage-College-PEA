@@ -1,0 +1,39 @@
+﻿<div class="text-xl container mx-auto my-8 p-6 bg-white rounded-lg shadow-lg text-lg">
+    <p class="font-black hidden">Status: <span id="status">Waiting...</span></p>
+    <div>
+        <h1 class="font-black text-4xl flex items-center justify-between" id="timerHeading">
+            <span id="timer">30s Left</span>
+            <button class="btn" id="peer-codeBtn" onclick="document.getElementById('codeDialog').showModal()">Enter Code</button>
+            <button id="layoutBtn" class="row" onclick="changeLayout()" title="Change The Page Layout"><img src="~/images/duel-layout.png" alt="Change Layout" /></button>
+        </h1>
+
+        <section id="duelSection">
+            <div id="myDisplay" class="container mx-auto my-8 p-6 bg-white rounded-lg border border-solid border-black">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a dignissim ante, sit amet euismod augue. Vivamus malesuada risus non iaculis aliquet. Integer gravida ligula sed dui tristique porttitor. In at massa urna. Curabitur viverra posuere libero, ut lacinia lectus eleifend at. Morbi efficitur nibh id tempus consequat. Integer eget porta enim.
+            </div>
+            <div id="enemyDisplay" class="container mx-auto my-8 p-6 bg-white rounded-lg border border-solid border-black">
+                Etiam cursus efficitur turpis vel laoreet. Fusce viverra nec augue vel aliquam. Quisque eros metus, bibendum eu lectus quis, ullamcorper convallis odio. Vivamus nisi tortor, tempus sed pellentesque et, laoreet nec felis. Duis quis efficitur augue. Nam tortor lorem, pretium non velit vel, fermentum tristique elit. Pellentesque finibus libero et odio porta sollicitudin.
+            </div>
+        </section>
+    </div>
+</div>
+
+<dialog id="codeDialog">
+    <div class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
+        <p class="mb-5">Ask your opponent to give the join code:</p>
+        <form id="connect-form">
+            <input id="peer-input"  maxlength="6"/>
+            <button class="btn content-center" id="connect-btn">Connect</button>
+        </form>
+    </div>
+</dialog>
+
+<dialog id="countdown">
+    <h1>1...</h1>
+</dialog>
+
+@section Scripts {
+    <script src="~/js/DuelLayout.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="~/js/DuelJS.js"></script>
+}
