@@ -66,7 +66,7 @@ The student, \_**\_**\_**\_**\_**\_**\_**\_**\___, has passed the Program Exit A
 The portfolio must be resubmitted by the following date: \_**\_**\_**\_**\_**\_**\___
 
 **Required Changes:**
-- Address the comments
+- Address the few minor comments
 
 Assessment Team \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
 
