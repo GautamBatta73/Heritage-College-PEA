@@ -41,24 +41,19 @@ Dated: 24<sup>th</sup> June 2024
 
 | **3rd Year Work Submitted to Portfolio** | **Included**<br><br>**(Y or N)** | **Comments** |
 | --- | --- | --- |
-| Updates made from 2<sup>nd</sup> year comments |     |     |
-| --- | --- | --- |
-| Structure of portfolio correct |     |     |
-| --- | --- | --- |
-| README files updated |     |     |
-| --- | --- | --- |
-| Systems Maintenance feature example |     |     |
-| Development Project feature example |     |     |
-| Advanced Topics I Technical Report |     |     |
-| Advanced Topics II Assignment |     |     |
-| Co-op work term report #2 |     |     |
-| Work submitted to portfolio supports reflection. |     |     |
-| 3<sup>rd</sup> Year Reflection – is reflective of the program and third year learning outcomes. |     |     |
-| 3<sup>rd</sup> Year Reflection – spelling and grammar correct throughout. |     |     |
+| Updates made from 2<sup>nd</sup> year comments |  Y   |     |
+| Structure of portfolio correct |  Y  |     |
+| README files updated |  Y  |     |
+| Systems Maintenance feature example |  N   |     |
+| Development Project feature example |  Y   | README: Should be "... called `Development Project I` and `Development Project II`, where my team...".    |
+| Advanced Topics I Technical Report |  Y   |     |
+| Advanced Topics II Assignment |  Y   |     |
+| Co-op work term report #2 |  Y   |     |
+| Work submitted to portfolio supports reflection. |  Y   |     |
+| 3<sup>rd</sup> Year Reflection – is reflective of the program and third year learning outcomes. |  Y   |     |
+| 3<sup>rd</sup> Year Reflection – spelling and grammar correct throughout. |  N  | Replace "team-working" with "teamwork". Trim verbose expressions like: "actually effectively", "ultimately proved",      |
 
-Third Year Assessment Team \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
-
-\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
+Third Year Assessment Team: Adewole Adewumi & Katrina Butler
 
 Dated: \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**
 
@@ -71,6 +66,7 @@ The student, \_**\_**\_**\_**\_**\_**\_**\_**\___, has passed the Program Exit A
 The portfolio must be resubmitted by the following date: \_**\_**\_**\_**\_**\_**\___
 
 **Required Changes:**
+- Address the comments
 
 Assessment Team \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
 
