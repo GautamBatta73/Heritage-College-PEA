@@ -32,7 +32,7 @@ Dated: \___May 11, 2023_\_**\_**\_**\_**\__
 | Values in the Workplace Ethical Analysis | N   |     |
 | Co-op work term report | Y   |     |
 | Work submitted to portfolio supports reflection. | Y   |     |
-| 2<sup>nd</sup> Year Reflection – is reflective of the program and second year learning outcomes. | Y   | You left some revisions in the reflection, either accept or reject all revisions. |
+| 2<sup>nd</sup> Year Reflection – is reflective of the program and second year learning outcomes. | Y |  |
 | 2<sup>nd</sup> Year Reflection – spelling and grammar correct throughout. | Y   |     |
 
 Second Year Assessment Team:  Adewole Adewumi && Marissa Cleroux
