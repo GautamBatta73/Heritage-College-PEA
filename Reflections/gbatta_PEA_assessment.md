@@ -3,12 +3,10 @@
 | **1<sup>st</sup> Year Work Submitted to Portfolio** | **Included**<br><br>**(Y or N)** | **Comments** |
 | --- | --- | --- |
 | Structure of portfolio correct | Y   |     |
-| --- | --- | --- |
-| README files updated | Y   | Remove or tone down the commentary on your first year courses in your main README since employers may see this repository – focus more on what you learned in the courses. Very good use of your project README files. |
-| --- | --- | --- |
+| README files updated | Y   |  |
 | Web I Website | Y   |     |
 | Math for Computer Science Problem Solving Reflection | Y   |     |
-| Web II Game | N   |     |
+| Web II Game | Y  |     |
 | Programming II Game | Y   |     |
 | Resume | Y   |     |
 | Work submitted to portfolio supports reflection. | Y   |     |
@@ -23,12 +21,9 @@ Dated: \___May 11, 2023_\_**\_**\_**\_**\__
 
 | **2<sup>nd</sup> Year Work Submitted to Portfolio** | **Included**<br><br>**(Y or N)** | **Comments** |
 | --- | --- | --- |
-| Updates made from 1<sup>st</sup> year comments | Y   |     |
-| --- | --- | --- |
+| Updates made from 1<sup>st</sup> year comments | Y |     |
 | Structure of portfolio correct | Y   |     |
-| --- | --- | --- |
-| README files updated | Y   |     |
-| --- | --- | --- |
+| README files updated | Y |     |
 | Programming III assignment | Y   |     |
 | Web Programming III assignment | Y   |     |
 | Systems Analysis HVK Prototype | Y   |     |
@@ -40,17 +35,9 @@ Dated: \___May 11, 2023_\_**\_**\_**\_**\__
 | 2<sup>nd</sup> Year Reflection – is reflective of the program and second year learning outcomes. | Y   | You left some revisions in the reflection, either accept or reject all revisions. |
 | 2<sup>nd</sup> Year Reflection – spelling and grammar correct throughout. | Y   |     |
 
-**Adewole Adewumi**
+Second Year Assessment Team:  Adewole Adewumi && Marissa Cleroux
 
-Second Year Assessment Team \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
-
-**Marissa Cleroux**
-
-\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
-
-24<sup>th</sup> June 2024
-
-Dated: \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**
+Dated: 24<sup>th</sup> June 2024
 
 | **3rd Year Work Submitted to Portfolio** | **Included**<br><br>**(Y or N)** | **Comments** |
 | --- | --- | --- |
