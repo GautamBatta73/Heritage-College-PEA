@@ -45,13 +45,13 @@ Dated: 24<sup>th</sup> June 2024
 | Structure of portfolio correct |  Y  |     |
 | README files updated |  Y  |     |
 | Systems Maintenance feature example |  N   |     |
-| Development Project feature example |  Y   | README: Should be "... called `Development Project I` and `Development Project II`, where my team...".    |
+| Development Project feature example |  Y   |     |
 | Advanced Topics I Technical Report |  Y   |     |
 | Advanced Topics II Assignment |  Y   |     |
 | Co-op work term report #2 |  Y   |     |
 | Work submitted to portfolio supports reflection. |  Y   |     |
 | 3<sup>rd</sup> Year Reflection – is reflective of the program and third year learning outcomes. |  Y   |     |
-| 3<sup>rd</sup> Year Reflection – spelling and grammar correct throughout. |  N  | Replace "team-working" with "teamwork". Trim verbose expressions like: "actually effectively", "ultimately proved",      |
+| 3<sup>rd</sup> Year Reflection – spelling and grammar correct throughout. |  Y  |     |
 
 Third Year Assessment Team: Adewole Adewumi & Katrina Butler
 
