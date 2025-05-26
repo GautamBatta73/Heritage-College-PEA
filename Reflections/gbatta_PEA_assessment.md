@@ -78,10 +78,8 @@ Dated: \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**
 
 **Comments**:
 
-The student, \_**\_**\_**\_**\_**\_**\_**\_**\___, has passed the Program Exit Assessment.
+The student, Gautam Batta, has passed the Program Exit Assessment.
 
-Assessment Team \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
+Assessment Team: Adewole Adewumi & Katrina Butler
 
-\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\___\__
-
-Dated: \_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**\_**
+Dated: 2025/05/26
