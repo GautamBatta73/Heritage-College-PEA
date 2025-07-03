@@ -74,4 +74,4 @@ A great ChatGPT alternative, using DeepSeek and Llama. It works very well and ha
 
 [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/AI_Chat_Assistant)<br>
 
-Currently Deployed at [SidGautamAI.glitch.me](https://sidgautamai.glitch.me)
+Currently Deployed at [SidGautam.ca/AI-Chat](https://sidgautam.ca/ai-chat/)
