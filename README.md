@@ -70,6 +70,8 @@ A great ChatGPT alternative, using DeepSeek and Llama. It works very well and ha
 
 Currently Deployed at [SidGautam.ca/ai-chat](https://sidgautam.ca/ai-chat/)
 
+<br>
+
 ## SidGautamOS: 
 A debian-based Linux distribution, that I made from about as scratch as you can get. 
 
