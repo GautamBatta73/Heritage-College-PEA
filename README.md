@@ -1,7 +1,7 @@
 # Program Exit Assessment
 ## Gautam Batta
 
-[batta.gautam@cegep-heritage.qc.ca](mailto:batta.gautam@cegep-heritage.qc.ca)
+[GBatta2005@gmail.com](mailto:gbatta2005@gmail.com)
 
 Heritage College
 
@@ -48,12 +48,6 @@ Development Project II<br>
 
 <hr>
 
-### My Current Computer Science Courses:
-  1. Development Project II
-  2. IT Security
-  3. Advanced Topics in Computer Science II
-
-
 ![math](https://user-images.githubusercontent.com/119340575/205943872-9c3b14a7-07db-4aac-a579-4cba24985b35.svg)
 
 <hr>
@@ -65,13 +59,18 @@ Development Project II<br>
 ## SidGautamJS: 
 A fully-functioning JavaScript library. It works very well and can be useful, but it has a steep learning curve. 
 
-[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/JavaScript)
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript)
 
 <br>
 
 ## SidGautamAI: 
 A great ChatGPT alternative, using DeepSeek and Llama. It works very well and has a simple and pretty UI. 
 
-[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/0cfbf2483b5991a22ed2218be9f43323d1c5a13c/Versions/AI_Chat_Assistant)<br>
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/AI_Chat_Assistant)<br>
 
 Currently Deployed at [SidGautam.ca/ai-chat](https://sidgautam.ca/ai-chat/)
+
+## SidGautamOS: 
+A debian-based Linux distribution, that I made from about as scratch as you can get. 
+
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/Linux_Distro)<br>
