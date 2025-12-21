@@ -61,6 +61,8 @@ A fully-functioning JavaScript library. It works very well and can be useful, bu
 
 [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript)
 
+Currently Deployed at [SidGautam.ca/js-lib](https://sidgautam.ca/js-lib/)
+
 <br>
 
 ## SidGautamAI: 
@@ -76,3 +78,8 @@ Currently Deployed at [SidGautam.ca/ai-chat](https://sidgautam.ca/ai-chat/)
 A debian-based Linux distribution, that I made from about as scratch as you can get. 
 
 [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/Linux_Distro)<br>
+
+## SidGautamNotes: 
+A simple text-editor that runs natively on Windows, and as a Java JAR file. 
+
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/Notepad)<br>
