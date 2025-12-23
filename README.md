@@ -82,6 +82,6 @@ A debian-based Linux distribution, that I made from about as scratch as you can 
 <br>
 
 ## SidGautamNotes: 
-A simple text-editor that runs natively on Windows, and as a Java JAR file. 
+A simple text-editor that runs natively on Windows and Debian-Based Linux Distributions, and as a Java JAR file. 
 
 [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/Notepad)<br>
