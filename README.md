@@ -56,12 +56,11 @@ Development Project II<br>
 
 <br>
 
-## SidGautamJS: 
-A fully-functioning JavaScript library. It works very well and can be useful, but it has a steep learning curve. 
+## SidGautamScript: 
+A custom programming language, based on JavaScript, Lua, and Java. The compiler and runtime environment is written in NodeJS.
+If you know your JavaScript, it should be simple to pick up.
 
-[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript)
-
-Currently Deployed at [SidGautam.ca/js-lib](https://sidgautam.ca/js-lib/)
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/Prog_Language)<br>
 
 <br>
 
@@ -78,6 +77,15 @@ Currently Deployed at [SidGautam.ca/ai-chat](https://sidgautam.ca/ai-chat/)
 A debian-based Linux distribution, that I made from about as scratch as you can get. 
 
 [GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/Linux_Distro)<br>
+
+<br>
+
+## SidGautamJS: 
+A fully-functioning JavaScript library. It works very well and can be useful, but it has a steep learning curve. 
+
+[GitHub Repo](https://github.com/GautamBatta73/SidGautam/tree/main/Versions/JavaScript)
+
+Currently Deployed at [SidGautam.ca/js-lib](https://sidgautam.ca/js-lib/)
 
 <br>
 
